@@ -27,6 +27,7 @@ public class MouseRotate : MonoBehaviour
     }
     void Update()
     {
+        if (WindowsManager.AreOpenedWindows) return;
         RotatePlayer();
     }
 

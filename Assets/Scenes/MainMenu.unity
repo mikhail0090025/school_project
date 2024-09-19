@@ -1239,6 +1239,7 @@ GameObject:
   - component: {fileID: 1997487959}
   - component: {fileID: 1997487958}
   - component: {fileID: 1997487961}
+  - component: {fileID: 1997487962}
   m_Layer: 5
   m_Name: new_game_button
   m_TagString: Untagged
@@ -1356,12 +1357,25 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1997487956}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0c16f63fc0309dc40bb6c007a03c9bad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   SceneName: NewGame
+--- !u!114 &1997487962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997487956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8488320f6ecc3c49ae4aba6e0906dc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneName: Game
 --- !u!1 &2122254808
 GameObject:
   m_ObjectHideFlags: 0

@@ -58,10 +58,16 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Scenes\ButtonSceneLoader.cs" />
-    <Compile Include="Assets\Scripts\Scenes\ButtonQuit.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Player\MouseRotate.cs" />
+    <Compile Include="Assets\Scripts\Scenes\ButtonSceneLoader.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Scenes\ButtonQuit.cs" />
+    <Compile Include="Assets\Scripts\Scenes\LoadScene.cs" />
+    <Compile Include="Assets\Scripts\Scenes\ButtonSceneLoader2.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerInventory.cs" />
+    <Compile Include="Assets\Scripts\UI\InventoryCell.cs" />
+    <Compile Include="Assets\Scripts\Items\ItemsData.cs" />
+    <Compile Include="Assets\Scripts\UI\WindowsManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
