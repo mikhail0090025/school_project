@@ -8,10 +8,15 @@ using UnityEngine;
 public class ItemsData : MonoBehaviour
 {
     public List<ItemData> Items;
+    static ItemsData instance;
+    public ItemData GetByID(int id)
+    {
+        return Items.Find(x => x.ID == id);
+    }
     // Start is called before the first frame update
     void Start()
     {
-        
+        instance = FindObjectOfType<ItemsData>();
     }
 
     // Update is called once per frame
@@ -19,6 +24,7 @@ public class ItemsData : MonoBehaviour
     {
         
     }
+    public static ItemData GetByID_(int id) => instance.GetByID(id);
 }
 [Serializable]
 public class ItemData
@@ -28,26 +34,13 @@ public class ItemData
     [SerializeField] string name;
     [SerializeField] string description;
     [SerializeField] Category category;
-    public Sprite Texture
-    {
-        get { return texture; }
-    }
-    public int ID
-    {
-        get { return id; }
-    }
-    public string Name
-    {
-        get { return name; }
-    }
-    public string Description
-    {
-        get { return description; }
-    }
-    public Category Category
-    {
-        get { return category; }
-    }
+    [SerializeField] bool onlyOne; // Player can have only one object of this type in inventory
+    public Sprite Texture => texture;
+    public int ID => id;
+    public string Name => name;
+    public string Description => description;
+    public Category Category => category;
+    public bool OnlyOne => onlyOne;
 
 }
 [Flags]
