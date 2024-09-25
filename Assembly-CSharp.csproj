@@ -63,13 +63,17 @@
     <Compile Include="Assets\Scripts\UI\WindowsManager.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Items\ItemsData.cs" />
+    <Compile Include="Assets\Scripts\Items\CollectOnClick.cs" />
     <Compile Include="Assets\Scripts\UI\InventoryCell.cs" />
     <Compile Include="Assets\Scripts\Scenes\ButtonQuit.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerInventory.cs" />
     <Compile Include="Assets\Scripts\Scenes\LoadScene.cs" />
     <Compile Include="Assets\Scripts\Scenes\ButtonSceneLoader2.cs" />
     <Compile Include="Assets\Scripts\Player\PlayersGuns.cs" />
-    <Compile Include="Assets\Scripts\Items\CollectOnClick.cs" />
+    <Compile Include="Assets\Scripts\Guns\Gun.cs" />
+    <Compile Include="Assets\Scripts\Guns\Pistol.cs" />
+    <Compile Include="Assets\Scripts\Guns\SubmachineGun.cs" />
+    <Compile Include="Assets\Scripts\Guns\Shotgun.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

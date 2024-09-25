@@ -4,6 +4,8 @@ ScriptsOnlyBuild:
     - ButtonQuit
     - ButtonSceneLoader
     - ButtonSceneLoader2
+    - CollectOnClick
+    - Gun
     - InventoryCell
     - ItemsData
     - LoadScene
@@ -20,6 +22,14 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshProUGUI
+    UnityEditor.Graphs.dll:
+    - UnityEditor.Graphs.AnimationBlendTree.Graph
+    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
+    - UnityEditor.Graphs.AnimationStateMachine.Graph
+    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
+    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -88,9 +98,17 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 54
       Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 89
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -115,21 +133,25 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 18754}
     - Class: 114
-      Script: {instanceID: 19454}
+      Script: {instanceID: 19348}
     - Class: 114
-      Script: {instanceID: 19722}
+      Script: {instanceID: 19456}
     - Class: 114
-      Script: {instanceID: 19990}
+      Script: {instanceID: 19724}
     - Class: 114
-      Script: {instanceID: 20138}
+      Script: {instanceID: 19992}
     - Class: 114
-      Script: {instanceID: 20250}
+      Script: {instanceID: 20140}
     - Class: 114
-      Script: {instanceID: 20452}
+      Script: {instanceID: 20252}
     - Class: 114
-      Script: {instanceID: 20556}
+      Script: {instanceID: 20454}
     - Class: 114
-      Script: {instanceID: 28860}
+      Script: {instanceID: 20558}
+    - Class: 114
+      Script: {instanceID: 21888}
+    - Class: 114
+      Script: {instanceID: 32944}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -196,17 +218,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 18776}
     - Class: 114
-      Script: {instanceID: 19454}
+      Script: {instanceID: 19456}
     - Class: 114
-      Script: {instanceID: 19990}
+      Script: {instanceID: 19992}
     - Class: 114
-      Script: {instanceID: 20138}
+      Script: {instanceID: 20140}
     - Class: 114
-      Script: {instanceID: 20250}
+      Script: {instanceID: 20252}
     - Class: 114
-      Script: {instanceID: 20452}
+      Script: {instanceID: 20454}
     - Class: 114
-      Script: {instanceID: 21788}
+      Script: {instanceID: 21790}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -255,13 +277,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 17564}
     - Class: 114
-      Script: {instanceID: 19454}
+      Script: {instanceID: 19456}
     - Class: 114
-      Script: {instanceID: 19990}
+      Script: {instanceID: 19992}
     - Class: 114
-      Script: {instanceID: 20138}
+      Script: {instanceID: 20140}
     - Class: 114
-      Script: {instanceID: 20452}
+      Script: {instanceID: 20454}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -304,13 +326,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 17266}
     - Class: 114
-      Script: {instanceID: 19454}
+      Script: {instanceID: 19456}
     - Class: 114
-      Script: {instanceID: 19990}
+      Script: {instanceID: 19992}
     - Class: 114
-      Script: {instanceID: 20138}
+      Script: {instanceID: 20140}
     - Class: 114
-      Script: {instanceID: 21510}
+      Script: {instanceID: 21512}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -359,13 +381,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 17564}
     - Class: 114
-      Script: {instanceID: 19454}
+      Script: {instanceID: 19456}
     - Class: 114
-      Script: {instanceID: 19990}
+      Script: {instanceID: 19992}
     - Class: 114
-      Script: {instanceID: 20138}
+      Script: {instanceID: 20140}
     - Class: 114
-      Script: {instanceID: 20452}
+      Script: {instanceID: 20454}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -709,7 +731,7 @@ ScriptsOnlyBuild:
     className: ActivationTrack
   - hash:
       serializedVersion: 2
-      Hash: a8a3142cf4f5ae565cef96365cdc4cf4
+      Hash: 704347c1e2139e1bafe7d87a22ce6748
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
@@ -793,7 +815,7 @@ ScriptsOnlyBuild:
     className: TMP_SubMeshUI
   - hash:
       serializedVersion: 2
-      Hash: f833b37c0924fa37360f203d999490f5
+      Hash: 61b77e3adf67229a40a9f5f5bbc9e180
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ItemsData
@@ -869,6 +891,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Toggle
+  - hash:
+      serializedVersion: 2
+      Hash: db02c7344630852769e906d3a7ec09c3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CollectOnClick
   - hash:
       serializedVersion: 2
       Hash: 9efc8c65b86b5c1022ed3efd7ac004a8
@@ -1189,6 +1217,12 @@ ScriptsOnlyBuild:
     className: TMP_ScrollbarEventHandler
   - hash:
       serializedVersion: 2
+      Hash: 8326bafa7db7631e553ffe9bb5638372
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayersGuns
+  - hash:
+      serializedVersion: 2
       Hash: af3c7bb5f1a72685c8bff2aeb7ca8d1b
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -1219,10 +1253,16 @@ ScriptsOnlyBuild:
     className: UnityOnSliderValueChangedMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 8326bafa7db7631e553ffe9bb5638372
+      Hash: e5590bab52d81a1f7f0128fb4d6057fe
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: PlayersGuns
+    className: Gun
+  - hash:
+      serializedVersion: 2
+      Hash: 313531c024e6b14638ce13a26fac3071
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Pistol
   platform: 19
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
