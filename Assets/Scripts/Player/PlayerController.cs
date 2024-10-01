@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float crouchSpeed = 2f;
     [SerializeField] float jump = 50f;
     [SerializeField] Transform HorizontalPoint;
+    [SerializeField] Animator CameraAnimator;
     const float jumpFactor = 0.1f;
     Rigidbody Rigidbody;
     CapsuleCollider cc;
@@ -36,6 +37,8 @@ public class PlayerController : MonoBehaviour
         if (crouchInput > 0) curr_speed = crouchSpeed;
         else if (Input.GetKey(KeyCode.LeftShift)) curr_speed = runSpeed;
         else curr_speed = speed;
+        CameraAnimator.SetBool("Run", Input.GetKey(KeyCode.LeftShift) && (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D)));
+        CameraAnimator.SetBool("Aim", Input.GetMouseButton(1));
         cc.height = crouchInput > 0 ? 1 : 2;
 
         if (verticalInput > 0)

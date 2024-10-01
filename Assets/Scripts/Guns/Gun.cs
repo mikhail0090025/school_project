@@ -20,12 +20,9 @@ public class Gun : MonoBehaviour
     protected virtual void Update()
     {
         timeSinceLastShot += Time.deltaTime;
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && !WindowsManager.AreOpenedWindows && timeSinceLastShot > shotPause)
         {
-            if (timeSinceLastShot > shotPause)
-            {
-                Shoot();
-            }
+            Shoot();
         }
         animator.SetBool("Center", Input.GetMouseButton(1));
     }

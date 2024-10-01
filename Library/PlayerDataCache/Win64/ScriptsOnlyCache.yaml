@@ -5,14 +5,16 @@ ScriptsOnlyBuild:
     - ButtonSceneLoader
     - ButtonSceneLoader2
     - CollectOnClick
-    - Gun
     - InventoryCell
     - ItemsData
     - LoadScene
     - MouseRotate
+    - Pistol
     - PlayerController
     - PlayerInventory
     - PlayersGuns
+    - Shotgun
+    - SubmachineGun
     - WindowsManager
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
@@ -133,25 +135,29 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 18754}
     - Class: 114
-      Script: {instanceID: 19348}
+      Script: {instanceID: 18892}
     - Class: 114
-      Script: {instanceID: 19456}
+      Script: {instanceID: 19350}
     - Class: 114
-      Script: {instanceID: 19724}
+      Script: {instanceID: 19458}
     - Class: 114
-      Script: {instanceID: 19992}
+      Script: {instanceID: 19726}
     - Class: 114
-      Script: {instanceID: 20140}
+      Script: {instanceID: 19994}
     - Class: 114
-      Script: {instanceID: 20252}
+      Script: {instanceID: 20142}
     - Class: 114
-      Script: {instanceID: 20454}
+      Script: {instanceID: 20246}
     - Class: 114
-      Script: {instanceID: 20558}
+      Script: {instanceID: 20256}
     - Class: 114
-      Script: {instanceID: 21888}
+      Script: {instanceID: 20458}
     - Class: 114
-      Script: {instanceID: 32944}
+      Script: {instanceID: 20562}
+    - Class: 114
+      Script: {instanceID: 20734}
+    - Class: 114
+      Script: {instanceID: 21896}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -218,17 +224,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 18776}
     - Class: 114
-      Script: {instanceID: 19456}
+      Script: {instanceID: 19458}
     - Class: 114
-      Script: {instanceID: 19992}
+      Script: {instanceID: 19994}
     - Class: 114
-      Script: {instanceID: 20140}
+      Script: {instanceID: 20142}
     - Class: 114
-      Script: {instanceID: 20252}
+      Script: {instanceID: 20256}
     - Class: 114
-      Script: {instanceID: 20454}
+      Script: {instanceID: 20458}
     - Class: 114
-      Script: {instanceID: 21790}
+      Script: {instanceID: 21798}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -277,13 +283,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 17564}
     - Class: 114
-      Script: {instanceID: 19456}
+      Script: {instanceID: 19458}
     - Class: 114
-      Script: {instanceID: 19992}
+      Script: {instanceID: 19994}
     - Class: 114
-      Script: {instanceID: 20140}
+      Script: {instanceID: 20142}
     - Class: 114
-      Script: {instanceID: 20454}
+      Script: {instanceID: 20458}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -326,13 +332,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 17266}
     - Class: 114
-      Script: {instanceID: 19456}
+      Script: {instanceID: 19458}
     - Class: 114
-      Script: {instanceID: 19992}
+      Script: {instanceID: 19994}
     - Class: 114
-      Script: {instanceID: 20140}
+      Script: {instanceID: 20142}
     - Class: 114
-      Script: {instanceID: 21512}
+      Script: {instanceID: 21518}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -381,13 +387,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 17564}
     - Class: 114
-      Script: {instanceID: 19456}
+      Script: {instanceID: 19458}
     - Class: 114
-      Script: {instanceID: 19992}
+      Script: {instanceID: 19994}
     - Class: 114
-      Script: {instanceID: 20140}
+      Script: {instanceID: 20142}
     - Class: 114
-      Script: {instanceID: 20454}
+      Script: {instanceID: 20458}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -731,7 +737,7 @@ ScriptsOnlyBuild:
     className: ActivationTrack
   - hash:
       serializedVersion: 2
-      Hash: 704347c1e2139e1bafe7d87a22ce6748
+      Hash: 2666fadb3e6cedfdc62ecb112b217f04
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
@@ -831,6 +837,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnCancelMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 7167a98c417df53f83832167c361fd06
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SubmachineGun
   - hash:
       serializedVersion: 2
       Hash: 6d1ca98bad1cb30a274f79776b279843
@@ -995,6 +1007,12 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
+      Hash: 69ab4f34651a31e4ca280295547ce723
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Shotgun
+  - hash:
+      serializedVersion: 2
       Hash: 59dd11ae70427b145d84002cc946c12b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -1047,6 +1065,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextContainer
+  - hash:
+      serializedVersion: 2
+      Hash: 313531c024e6b14638ce13a26fac3071
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Pistol
   - hash:
       serializedVersion: 2
       Hash: f1ba3939edcf4406dbb90ccb6e292259
@@ -1175,6 +1199,12 @@ ScriptsOnlyBuild:
     className: LoadScene
   - hash:
       serializedVersion: 2
+      Hash: e5590bab52d81a1f7f0128fb4d6057fe
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Gun
+  - hash:
+      serializedVersion: 2
       Hash: 7d058425dfd4d06ddec4be7a4bb72067
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
@@ -1251,18 +1281,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: e5590bab52d81a1f7f0128fb4d6057fe
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Gun
-  - hash:
-      serializedVersion: 2
-      Hash: 313531c024e6b14638ce13a26fac3071
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Pistol
   platform: 19
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
