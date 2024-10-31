@@ -1,20 +1,21 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ButtonQuit : MonoBehaviour
 {
-    Button button;
+    Button button; // Odkaz na komponentu tlačítka
+
     // Start is called before the first frame update
     void Start()
     {
-        button = GetComponent<Button>();
-        button.onClick.RemoveAllListeners();
+        button = GetComponent<Button>(); // Získá komponentu Button připojenou k tomuto GameObject
+        button.onClick.RemoveAllListeners(); // Odstraní všechny dřívější posluchače událostí kliknutí
+        // Přidá posluchače, který ukončí aplikaci, když je tlačítko stisknuto
         button.onClick.AddListener(delegate
         {
-            Application.Quit();
+            Application.Quit(); // Ukončí aplikaci
         });
     }
 }

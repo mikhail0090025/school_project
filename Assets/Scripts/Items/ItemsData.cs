@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Xml.Linq;
@@ -7,42 +7,45 @@ using UnityEngine;
 
 public class ItemsData : MonoBehaviour
 {
-    public List<ItemData> Items;
-    static ItemsData instance;
+    public List<ItemData> Items; // Seznam položek (items) typu ItemData
+    static ItemsData instance; // Statická instance pro usnadnění přístupu
+
+    // Vrátí položku podle jejího ID
     public ItemData GetByID(int id)
     {
         return Items.Find(x => x.ID == id);
     }
-    // Start is called before the first frame update
+
+    // Inicializace instance při startu
     void Start()
     {
         instance = FindObjectOfType<ItemsData>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    // Statická metoda pro získání položky podle ID
     public static ItemData GetByID_(int id) => instance.GetByID(id);
 }
+
 [Serializable]
 public class ItemData
 {
-    [SerializeField] Sprite texture;
-    [SerializeField] int id;
-    [SerializeField] string name;
-    [SerializeField] string description;
-    [SerializeField] Category category;
-    [SerializeField] bool onlyOne; // Player can have only one object of this type in inventory
+    [SerializeField] Sprite texture;           // Textura položky (ikona, obrázek)
+    [SerializeField] int id;                   // Unikátní ID položky
+    [SerializeField] string name;              // Jméno položky
+    [SerializeField] string description;       // Popis položky
+    [SerializeField] Category category;        // Kategorie položky
+    [SerializeField] bool onlyOne;             // Určuje, zda hráč může mít pouze jednu položku tohoto typu
+
+    // Vlastnosti pro přístup k datům položky
     public Sprite Texture => texture;
     public int ID => id;
     public string Name => name;
     public string Description => description;
     public Category Category => category;
     public bool OnlyOne => onlyOne;
-
 }
+
+// Výčtový typ (enum) s atributem [Flags] pro kategorizaci položek
 [Flags]
 public enum Category
 {
