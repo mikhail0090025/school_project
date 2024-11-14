@@ -13,12 +13,15 @@ ScriptsOnlyBuild:
     - PlayerController
     - PlayerInventory
     - PlayersGuns
+    - RefreshAmmoUI
+    - SettingsController
     - Shotgun
     - SubmachineGun
     - WindowsManager
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro.dll:
+    - TMPro.TMP_Dropdown
     - TMPro.TMP_FontAsset
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
@@ -27,10 +30,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -43,6 +44,11 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Mask
+    - UnityEngine.UI.ScrollRect
+    - UnityEngine.UI.Scrollbar
+    - UnityEngine.UI.Text
+    - UnityEngine.UI.Toggle
   serializedClasses:
     Assembly-CSharp:
     - GunData
@@ -53,6 +59,9 @@ ScriptsOnlyBuild:
     - TMPro.FontAssetCreationSettings
     - TMPro.KerningTable
     - TMPro.TMP_Character
+    - TMPro.TMP_Dropdown/DropdownEvent
+    - TMPro.TMP_Dropdown/OptionData
+    - TMPro.TMP_Dropdown/OptionDataList
     - TMPro.TMP_FontFeatureTable
     - TMPro.TMP_FontWeightPair
     - TMPro.TMP_GlyphAdjustmentRecord
@@ -74,9 +83,13 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.AnimationTriggers
     - UnityEngine.UI.Button/ButtonClickedEvent
     - UnityEngine.UI.ColorBlock
+    - UnityEngine.UI.FontData
     - UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
     - UnityEngine.UI.Navigation
+    - UnityEngine.UI.ScrollRect/ScrollRectEvent
+    - UnityEngine.UI.Scrollbar/ScrollEvent
     - UnityEngine.UI.SpriteState
+    - UnityEngine.UI.Toggle/ToggleEvent
   methodsToPreserve: []
   sceneClasses:
     Assets/Scenes/Game.unity:
@@ -119,45 +132,47 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16078}
     - Class: 114
-      Script: {instanceID: 17062}
+      Script: {instanceID: 16544}
     - Class: 114
-      Script: {instanceID: 17156}
+      Script: {instanceID: 17064}
     - Class: 114
-      Script: {instanceID: 17266}
+      Script: {instanceID: 17158}
     - Class: 114
-      Script: {instanceID: 17548}
+      Script: {instanceID: 17268}
     - Class: 114
-      Script: {instanceID: 17564}
+      Script: {instanceID: 17550}
     - Class: 114
-      Script: {instanceID: 18142}
+      Script: {instanceID: 17566}
     - Class: 114
-      Script: {instanceID: 18190}
+      Script: {instanceID: 18144}
     - Class: 114
-      Script: {instanceID: 18754}
+      Script: {instanceID: 18192}
     - Class: 114
-      Script: {instanceID: 18892}
+      Script: {instanceID: 18758}
     - Class: 114
-      Script: {instanceID: 19350}
+      Script: {instanceID: 18896}
     - Class: 114
-      Script: {instanceID: 19458}
+      Script: {instanceID: 19354}
     - Class: 114
-      Script: {instanceID: 19726}
+      Script: {instanceID: 19462}
     - Class: 114
-      Script: {instanceID: 19994}
+      Script: {instanceID: 19730}
     - Class: 114
-      Script: {instanceID: 20142}
+      Script: {instanceID: 19998}
     - Class: 114
-      Script: {instanceID: 20246}
+      Script: {instanceID: 20146}
     - Class: 114
-      Script: {instanceID: 20256}
+      Script: {instanceID: 20250}
     - Class: 114
-      Script: {instanceID: 20458}
+      Script: {instanceID: 20260}
     - Class: 114
-      Script: {instanceID: 20562}
+      Script: {instanceID: 20462}
     - Class: 114
-      Script: {instanceID: 20734}
+      Script: {instanceID: 20566}
     - Class: 114
-      Script: {instanceID: 21896}
+      Script: {instanceID: 20738}
+    - Class: 114
+      Script: {instanceID: 21900}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -210,31 +225,31 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16078}
     - Class: 114
-      Script: {instanceID: 16650}
+      Script: {instanceID: 16652}
     - Class: 114
-      Script: {instanceID: 17062}
+      Script: {instanceID: 17064}
     - Class: 114
-      Script: {instanceID: 17266}
+      Script: {instanceID: 17268}
     - Class: 114
-      Script: {instanceID: 17548}
+      Script: {instanceID: 17550}
     - Class: 114
-      Script: {instanceID: 17564}
+      Script: {instanceID: 17566}
     - Class: 114
-      Script: {instanceID: 18526}
+      Script: {instanceID: 18530}
     - Class: 114
-      Script: {instanceID: 18776}
+      Script: {instanceID: 18780}
     - Class: 114
-      Script: {instanceID: 19458}
+      Script: {instanceID: 19462}
     - Class: 114
-      Script: {instanceID: 19994}
+      Script: {instanceID: 19998}
     - Class: 114
-      Script: {instanceID: 20142}
+      Script: {instanceID: 20146}
     - Class: 114
-      Script: {instanceID: 20256}
+      Script: {instanceID: 20260}
     - Class: 114
-      Script: {instanceID: 20458}
+      Script: {instanceID: 20462}
     - Class: 114
-      Script: {instanceID: 21798}
+      Script: {instanceID: 21802}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -275,21 +290,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16078}
     - Class: 114
-      Script: {instanceID: 17062}
+      Script: {instanceID: 17064}
     - Class: 114
-      Script: {instanceID: 17266}
+      Script: {instanceID: 17268}
     - Class: 114
-      Script: {instanceID: 17548}
+      Script: {instanceID: 17550}
     - Class: 114
-      Script: {instanceID: 17564}
+      Script: {instanceID: 17566}
     - Class: 114
-      Script: {instanceID: 19458}
+      Script: {instanceID: 19462}
     - Class: 114
-      Script: {instanceID: 19994}
+      Script: {instanceID: 19998}
     - Class: 114
-      Script: {instanceID: 20142}
+      Script: {instanceID: 20146}
     - Class: 114
-      Script: {instanceID: 20458}
+      Script: {instanceID: 20462}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -330,15 +345,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16078}
     - Class: 114
-      Script: {instanceID: 17266}
+      Script: {instanceID: 17268}
     - Class: 114
-      Script: {instanceID: 19458}
+      Script: {instanceID: 19462}
     - Class: 114
-      Script: {instanceID: 19994}
+      Script: {instanceID: 19998}
     - Class: 114
-      Script: {instanceID: 20142}
+      Script: {instanceID: 20146}
     - Class: 114
-      Script: {instanceID: 21518}
+      Script: {instanceID: 21522}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -379,21 +394,35 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16078}
     - Class: 114
-      Script: {instanceID: 17062}
+      Script: {instanceID: 17064}
     - Class: 114
-      Script: {instanceID: 17266}
+      Script: {instanceID: 17070}
     - Class: 114
-      Script: {instanceID: 17548}
+      Script: {instanceID: 17268}
     - Class: 114
-      Script: {instanceID: 17564}
+      Script: {instanceID: 17550}
     - Class: 114
-      Script: {instanceID: 19458}
+      Script: {instanceID: 17566}
     - Class: 114
-      Script: {instanceID: 19994}
+      Script: {instanceID: 18300}
     - Class: 114
-      Script: {instanceID: 20142}
+      Script: {instanceID: 18342}
     - Class: 114
-      Script: {instanceID: 20458}
+      Script: {instanceID: 19342}
+    - Class: 114
+      Script: {instanceID: 19462}
+    - Class: 114
+      Script: {instanceID: 19704}
+    - Class: 114
+      Script: {instanceID: 19998}
+    - Class: 114
+      Script: {instanceID: 20146}
+    - Class: 114
+      Script: {instanceID: 20462}
+    - Class: 114
+      Script: {instanceID: 20470}
+    - Class: 114
+      Script: {instanceID: 21492}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -465,6 +494,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnMouseExitMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 2283da0923aaf3372b82d02733799fb3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RefreshAmmoUI
   - hash:
       serializedVersion: 2
       Hash: 4763159aa2d72ed796c2398564a4d18d
@@ -755,6 +790,12 @@ ScriptsOnlyBuild:
     className: Mask
   - hash:
       serializedVersion: 2
+      Hash: 1a50c03de90edae823608d4c2c0f5d33
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SettingsController
+  - hash:
+      serializedVersion: 2
       Hash: 1824a9130d49df16abbf95d88546f25c
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
@@ -839,7 +880,7 @@ ScriptsOnlyBuild:
     className: UnityOnCancelMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 7167a98c417df53f83832167c361fd06
+      Hash: 202c8df9a39417b22295aef7118c1245
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SubmachineGun
@@ -1007,7 +1048,7 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
-      Hash: 69ab4f34651a31e4ca280295547ce723
+      Hash: 07f0dba17e99ddd178db2765ac671115
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Shotgun
@@ -1067,7 +1108,7 @@ ScriptsOnlyBuild:
     className: TextContainer
   - hash:
       serializedVersion: 2
-      Hash: 313531c024e6b14638ce13a26fac3071
+      Hash: 2f17a5d99e20e08426ebd0d33b21fdae
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Pistol
@@ -1199,7 +1240,7 @@ ScriptsOnlyBuild:
     className: LoadScene
   - hash:
       serializedVersion: 2
-      Hash: e5590bab52d81a1f7f0128fb4d6057fe
+      Hash: b8e0db6daca27d3c6ee15f3deff125b5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Gun
