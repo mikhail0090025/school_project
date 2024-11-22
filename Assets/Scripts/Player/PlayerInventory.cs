@@ -62,11 +62,6 @@ public class PlayerInventory : MonoBehaviour
         var cell = CellWithItem(ID); // Získejte buňku s touto položkou
         if (cell == null)
             cell = EmptyCell(); // Pokud není buňka, získat prázdnou buňku
-        else
-        {
-            cell.SetCount(cell.Count + count); // Přidejte množství k existující buňce
-        }
-
         if (cell == null) // Pokud nebyla nalezena žádná buňka
         {
             Debug.LogException(new System.Exception("There are not cells to put")); // Vytvoření výjimky
@@ -74,7 +69,7 @@ public class PlayerInventory : MonoBehaviour
         }
         else
         {
-            cell.SetCell(count, ID); // Nastavte buňku s množstvím a ID
+            cell.SetCell(cell.Count + count, ID); // Nastavte buňku s množstvím a ID
         }
         RefreshInventory(); // Obnovte inventář
         return true; // Návrat true, pokud byla položka úspěšně přidána
