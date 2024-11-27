@@ -9,6 +9,7 @@ public class PlayerInventory : MonoBehaviour
     [SerializeField] InventoryCell gunCell; // Buněčný prostor pro zbraň
     public InventoryCell GunCell => gunCell; // Vlastnost pro přístup k buněčnému prostoru pro zbraň
     ItemsData ItemsData; // Odkaz na data o položkách
+    int gunIndex = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -18,14 +19,57 @@ public class PlayerInventory : MonoBehaviour
         {
             cell.ResetCell(); // Resetuj každou buňku
         }
-        gunCell.SetCell(1, 0); // Nastav zbraň na pozici 0 s množstvím 1
-        //PutToInventory(1, 1); // (Komentováno) Přidání položky do inventáře
+        gunCell.ResetCell();
+        //gunCell.SetCell(1, 0); // Nastav zbraň na pozici 0 s množstvím 1
+        //PutToInventory(1, 1); // Přidání položky do inventáře
         RefreshInventory(); // Obnov inventář
     }
 
     // Update is called once per frame
     void Update()
     {
+        float scroll = Input.GetAxis("Mouse ScrollWheel");
+
+        if (scroll > 0f) // Если колесо прокручено вверх
+        {
+            gunIndex++;
+            SetGunByIndex();
+            
+        }
+        else if (scroll < 0f) // Если колесо прокручено вниз
+        {
+            gunIndex--;
+            SetGunByIndex();
+        }
+    }
+
+    void SetGunByIndex()
+    {
+        CellClicked(gunCell);
+        int gunsCount = 0;
+        foreach (var cell in inventoryCells)
+        {
+            if (cell.MyID == -1) continue;
+            if ((ItemsData.GetByID_(cell.MyID).Category & Category.Gun) != Category.None)
+            {
+                gunsCount++;
+            }
+        }
+        if (gunsCount == 0) return;
+        int neededGunIndex = gunIndex % (gunsCount + 1);
+        int currIndex = 0;
+        foreach (var cell in inventoryCells)
+        {
+            if (cell.MyID == -1) continue;
+            if ((ItemsData.GetByID_(cell.MyID).Category & Category.Gun) != Category.None)
+            {
+                currIndex++;
+                if (currIndex == neededGunIndex)
+                {
+                    CellClicked(cell);
+                }
+            }
+        }
     }
 
     // Metoda pro počítání položek v inventáři podle ID
@@ -54,6 +98,7 @@ public class PlayerInventory : MonoBehaviour
     public bool PutToInventory(int ID, int count)
     {
         // Zkontrolujte, zda položka může být přidána do inventáře
+        if (ID < 0) return false;
         if (ItemsData.GetByID_(ID).OnlyOne && CountInInventory(ID) > 0)
         {
             return false; // Pokud je položka jedinečná a již je v inventáři, návrat false
@@ -114,6 +159,7 @@ public class PlayerInventory : MonoBehaviour
             {
                 if (cell == inventoryCells[i]) // Pokud kliknutá buňka je v inventáři
                 {
+                    if (inventoryCells[i].MyID == -1) return;
                     var item = this.ItemsData.Items.Find(x => x.ID == inventoryCells[i].MyID); // Najdi položku podle ID
                     if ((item.Category & Category.Gun) == Category.Gun && GunCell.IsEmpty) // Pokud je položka zbraň a prostor pro zbraň je prázdný
                     {

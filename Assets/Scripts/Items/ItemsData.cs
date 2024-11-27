@@ -35,6 +35,7 @@ public class ItemData
     [SerializeField] string description;       // Popis položky
     [SerializeField] Category category;        // Kategorie položky
     [SerializeField] bool onlyOne;             // Určuje, zda hráč může mít pouze jednu položku tohoto typu
+    [SerializeField] GameObject droppedObject;    // Dropped
 
     // Vlastnosti pro přístup k datům položky
     public Sprite Texture => texture;
@@ -43,6 +44,7 @@ public class ItemData
     public string Description => description;
     public Category Category => category;
     public bool OnlyOne => onlyOne;
+    public GameObject DroppedObject => droppedObject;
 }
 
 // Výčtový typ (enum) s atributem [Flags] pro kategorizaci položek
