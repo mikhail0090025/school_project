@@ -2,6 +2,13 @@
     "serializedTypes": [],
     "typesInScenes": [
         {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "BotScript",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
             "managedAssemblyName": "",
             "nativeClass": "BuildSettings",
             "fullManagedTypeName": "",
@@ -298,6 +305,13 @@
             "usedInScenes": []
         },
         {
+            "managedAssemblyName": "Unity.AI.Navigation.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "Unity.AI.Navigation.NavMeshSurface",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
             "managedAssemblyName": "UnityEngine.dll",
             "nativeClass": "AnimatorController",
             "fullManagedTypeName": "UnityEditor.Animations.AnimatorController",
@@ -374,6 +388,24 @@
             "fullManagedTypeName": "UnityEditor.VFXManager",
             "moduleName": "VFX",
             "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "NavMeshAgent",
+            "fullManagedTypeName": "UnityEngine.AI.NavMeshAgent",
+            "moduleName": "AI",
+            "usedInScenes": [
+                "Assets/Scenes/Game.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "NavMeshData",
+            "fullManagedTypeName": "UnityEngine.AI.NavMeshData",
+            "moduleName": "AI",
+            "usedInScenes": [
+                "Assets/Scenes/Game.unity"
+            ]
         },
         {
             "managedAssemblyName": "UnityEngine.dll",
@@ -773,6 +805,15 @@
         },
         {
             "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "SphereCollider",
+            "fullManagedTypeName": "UnityEngine.SphereCollider",
+            "moduleName": "Physics",
+            "usedInScenes": [
+                "Assets/Scenes/Game.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
             "nativeClass": "Sprite",
             "fullManagedTypeName": "UnityEngine.Sprite",
             "moduleName": "Core",
@@ -870,6 +911,15 @@
                 "Assets/Scenes/NewGame.unity",
                 "Assets/Scenes/SceneLoader.unity",
                 "Assets/Scenes/Settings.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "Tree",
+            "fullManagedTypeName": "UnityEngine.Tree",
+            "moduleName": "Terrain",
+            "usedInScenes": [
+                "Assets/Scenes/Game.unity"
             ]
         },
         {

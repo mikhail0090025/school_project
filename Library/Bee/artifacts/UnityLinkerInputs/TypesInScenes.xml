@@ -1,5 +1,6 @@
 <linker>
 	<assembly fullname="Assembly-CSharp">
+		<type fullname="BotScript" preserve="nothing"/>
 		<type fullname="ButtonQuit" preserve="nothing"/>
 		<type fullname="ButtonSceneLoader" preserve="nothing"/>
 		<type fullname="ButtonSceneLoader2" preserve="nothing"/>
@@ -17,6 +18,9 @@
 		<type fullname="Shotgun" preserve="nothing"/>
 		<type fullname="SubmachineGun" preserve="nothing"/>
 		<type fullname="WindowsManager" preserve="nothing"/>
+	</assembly>
+	<assembly fullname="Unity.AI.Navigation">
+		<type fullname="Unity.AI.Navigation.NavMeshSurface" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Unity.TextMeshPro">
 		<type fullname="TMPro.TextMeshProUGUI" preserve="nothing"/>
@@ -38,6 +42,8 @@
 		<type fullname="UnityEditor.TagManager" preserve="nothing"/>
 		<type fullname="UnityEditor.TimeManager" preserve="nothing"/>
 		<type fullname="UnityEditor.VFXManager" preserve="nothing"/>
+		<type fullname="UnityEngine.AI.NavMeshAgent" preserve="nothing"/>
+		<type fullname="UnityEngine.AI.NavMeshData" preserve="nothing"/>
 		<type fullname="UnityEngine.AnimationClip" preserve="nothing"/>
 		<type fullname="UnityEngine.Animator" preserve="nothing"/>
 		<type fullname="UnityEngine.AudioBehaviour" preserve="nothing"/>
@@ -73,6 +79,7 @@
 		<type fullname="UnityEngine.RuntimeAnimatorController" preserve="nothing"/>
 		<type fullname="UnityEngine.Shader" preserve="nothing"/>
 		<type fullname="UnityEngine.SkinnedMeshRenderer" preserve="nothing"/>
+		<type fullname="UnityEngine.SphereCollider" preserve="nothing"/>
 		<type fullname="UnityEngine.Sprite" preserve="nothing"/>
 		<type fullname="UnityEngine.Terrain" preserve="nothing"/>
 		<type fullname="UnityEngine.TerrainCollider" preserve="nothing"/>
@@ -82,6 +89,7 @@
 		<type fullname="UnityEngine.Texture" preserve="nothing"/>
 		<type fullname="UnityEngine.Texture2D" preserve="nothing"/>
 		<type fullname="UnityEngine.Transform" preserve="nothing"/>
+		<type fullname="UnityEngine.Tree" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="UnityEngine.UI">
 		<type fullname="UnityEngine.EventSystems.EventSystem" preserve="nothing"/>

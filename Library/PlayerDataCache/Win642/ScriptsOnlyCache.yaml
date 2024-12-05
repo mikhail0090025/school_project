@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - BotScript
     - ButtonQuit
     - ButtonSceneLoader
     - ButtonSceneLoader2
@@ -18,6 +19,10 @@ ScriptsOnlyBuild:
     - Shotgun
     - SubmachineGun
     - WindowsManager
+    Unity.AI.Navigation.Editor.dll:
+    - Unity.AI.Navigation.Editor.NavMeshAssetManager
+    Unity.AI.Navigation.dll:
+    - Unity.AI.Navigation.NavMeshSurface
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro:
@@ -36,8 +41,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -140,52 +147,58 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 24824}
+      Script: {instanceID: 25092}
     - Class: 114
-      Script: {instanceID: 25052}
+      Script: {instanceID: 25330}
     - Class: 114
-      Script: {instanceID: 25064}
+      Script: {instanceID: 25344}
     - Class: 114
-      Script: {instanceID: 25108}
+      Script: {instanceID: 25390}
     - Class: 114
-      Script: {instanceID: 25182}
+      Script: {instanceID: 25470}
     - Class: 114
-      Script: {instanceID: 25574}
+      Script: {instanceID: 25878}
     - Class: 114
-      Script: {instanceID: 25816}
+      Script: {instanceID: 26130}
     - Class: 114
-      Script: {instanceID: 26178}
+      Script: {instanceID: 26508}
     - Class: 114
-      Script: {instanceID: 26334}
+      Script: {instanceID: 26672}
     - Class: 114
-      Script: {instanceID: 26438}
+      Script: {instanceID: 26778}
     - Class: 114
-      Script: {instanceID: 26466}
+      Script: {instanceID: 26806}
     - Class: 114
-      Script: {instanceID: 26636}
+      Script: {instanceID: 26980}
     - Class: 114
-      Script: {instanceID: 26832}
+      Script: {instanceID: 27182}
     - Class: 114
-      Script: {instanceID: 27050}
+      Script: {instanceID: 27408}
     - Class: 114
-      Script: {instanceID: 28224}
+      Script: {instanceID: 28616}
     - Class: 114
-      Script: {instanceID: 28520}
+      Script: {instanceID: 28926}
     - Class: 114
-      Script: {instanceID: 28946}
+      Script: {instanceID: 29370}
     - Class: 114
-      Script: {instanceID: 29326}
+      Script: {instanceID: 29740}
     - Class: 114
-      Script: {instanceID: 29688}
+      Script: {instanceID: 29764}
     - Class: 114
-      Script: {instanceID: 30030}
+      Script: {instanceID: 30142}
     - Class: 114
-      Script: {instanceID: 30188}
+      Script: {instanceID: 30492}
     - Class: 114
-      Script: {instanceID: 30268}
+      Script: {instanceID: 30652}
+    - Class: 114
+      Script: {instanceID: 30734}
+    - Class: 114
+      Script: {instanceID: 72448}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
+      Script: {instanceID: 0}
+    - Class: 135
       Script: {instanceID: 0}
     - Class: 136
       Script: {instanceID: 0}
@@ -196,6 +209,10 @@ ScriptsOnlyBuild:
     - Class: 156
       Script: {instanceID: 0}
     - Class: 157
+      Script: {instanceID: 0}
+    - Class: 193
+      Script: {instanceID: 0}
+    - Class: 195
       Script: {instanceID: 0}
     - Class: 196
       Script: {instanceID: 0}
@@ -208,6 +225,8 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 238
       Script: {instanceID: 0}
     - Class: 1953259897
       Script: {instanceID: 0}
@@ -235,35 +254,35 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 24824}
+      Script: {instanceID: 25092}
     - Class: 114
-      Script: {instanceID: 25064}
+      Script: {instanceID: 25344}
     - Class: 114
-      Script: {instanceID: 25544}
+      Script: {instanceID: 25846}
     - Class: 114
-      Script: {instanceID: 26178}
+      Script: {instanceID: 26508}
     - Class: 114
-      Script: {instanceID: 26466}
+      Script: {instanceID: 26806}
     - Class: 114
-      Script: {instanceID: 26636}
+      Script: {instanceID: 26980}
     - Class: 114
-      Script: {instanceID: 26832}
+      Script: {instanceID: 27182}
     - Class: 114
-      Script: {instanceID: 27050}
+      Script: {instanceID: 27408}
     - Class: 114
-      Script: {instanceID: 28592}
+      Script: {instanceID: 29002}
     - Class: 114
-      Script: {instanceID: 29082}
+      Script: {instanceID: 29512}
     - Class: 114
-      Script: {instanceID: 29232}
+      Script: {instanceID: 29670}
     - Class: 114
-      Script: {instanceID: 29326}
+      Script: {instanceID: 29764}
     - Class: 114
-      Script: {instanceID: 30030}
+      Script: {instanceID: 30492}
     - Class: 114
-      Script: {instanceID: 30128}
+      Script: {instanceID: 30592}
     - Class: 114
-      Script: {instanceID: 30188}
+      Script: {instanceID: 30652}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -302,23 +321,23 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 24824}
+      Script: {instanceID: 25092}
     - Class: 114
-      Script: {instanceID: 25064}
+      Script: {instanceID: 25344}
     - Class: 114
-      Script: {instanceID: 26178}
+      Script: {instanceID: 26508}
     - Class: 114
-      Script: {instanceID: 26636}
+      Script: {instanceID: 26980}
     - Class: 114
-      Script: {instanceID: 26832}
+      Script: {instanceID: 27182}
     - Class: 114
-      Script: {instanceID: 27050}
+      Script: {instanceID: 27408}
     - Class: 114
-      Script: {instanceID: 29326}
+      Script: {instanceID: 29764}
     - Class: 114
-      Script: {instanceID: 30030}
+      Script: {instanceID: 30492}
     - Class: 114
-      Script: {instanceID: 30188}
+      Script: {instanceID: 30652}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -357,17 +376,17 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 24824}
+      Script: {instanceID: 25092}
     - Class: 114
-      Script: {instanceID: 25064}
+      Script: {instanceID: 25344}
     - Class: 114
-      Script: {instanceID: 26178}
+      Script: {instanceID: 26508}
     - Class: 114
-      Script: {instanceID: 26904}
+      Script: {instanceID: 27254}
     - Class: 114
-      Script: {instanceID: 29326}
+      Script: {instanceID: 29764}
     - Class: 114
-      Script: {instanceID: 30188}
+      Script: {instanceID: 30652}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -406,37 +425,37 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 24824}
+      Script: {instanceID: 25092}
     - Class: 114
-      Script: {instanceID: 25064}
+      Script: {instanceID: 25344}
     - Class: 114
-      Script: {instanceID: 26178}
+      Script: {instanceID: 26508}
     - Class: 114
-      Script: {instanceID: 26636}
+      Script: {instanceID: 26980}
     - Class: 114
-      Script: {instanceID: 26832}
+      Script: {instanceID: 27182}
     - Class: 114
-      Script: {instanceID: 27050}
+      Script: {instanceID: 27408}
     - Class: 114
-      Script: {instanceID: 28468}
+      Script: {instanceID: 28870}
     - Class: 114
-      Script: {instanceID: 28572}
+      Script: {instanceID: 28982}
     - Class: 114
-      Script: {instanceID: 28788}
+      Script: {instanceID: 29208}
     - Class: 114
-      Script: {instanceID: 29124}
+      Script: {instanceID: 29560}
     - Class: 114
-      Script: {instanceID: 29326}
+      Script: {instanceID: 29764}
     - Class: 114
-      Script: {instanceID: 30030}
+      Script: {instanceID: 30492}
     - Class: 114
-      Script: {instanceID: 30088}
+      Script: {instanceID: 30550}
     - Class: 114
-      Script: {instanceID: 30188}
+      Script: {instanceID: 30652}
     - Class: 114
-      Script: {instanceID: 30672}
+      Script: {instanceID: 31144}
     - Class: 114
-      Script: {instanceID: 31184}
+      Script: {instanceID: 31668}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -468,6 +487,18 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
+      Hash: c98ae3467e2c21e018cfd77be9caaf8a
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Vehicles.Aeroplane
+    className: AeroplaneUserControl2Axis
+  - hash:
+      serializedVersion: 2
+      Hash: 84d80266c01a50d019053c1ad8ece535
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Water
+    className: WaterTile
+  - hash:
+      serializedVersion: 2
       Hash: e8d390bd9ecacc453a7500b90d0c0292
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.EventSystems
@@ -484,6 +515,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSubmitMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: c908bc973de30e0bd6d9b37972f687e8
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Utility
+    className: ParticleSystemDestroyer
+  - hash:
+      serializedVersion: 2
+      Hash: 8216cbac32f9438983d65e14cef8cb51
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets._2D
+    className: Restarter
   - hash:
       serializedVersion: 2
       Hash: 2c583ad0ac85d03e8700dd05fdcb46cb
@@ -504,16 +547,34 @@ ScriptsOnlyBuild:
     className: GraphicRaycaster
   - hash:
       serializedVersion: 2
+      Hash: d1cdda2a3f17cc21b35f075e1a00a429
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.CrossPlatformInput
+    className: TiltInput
+  - hash:
+      serializedVersion: 2
       Hash: e6f8333cc8a800e2866870a5ef7efc35
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnControllerColliderHitMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 44bac1665297a414742127e548f7823f
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: MenuSceneLoader
+  - hash:
+      serializedVersion: 2
       Hash: eb935c6cc03d88c715e205ccb8519cad
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: WindowsManager
+  - hash:
+      serializedVersion: 2
+      Hash: 2d6228f45e3ea9b55a0972b1a3d17b39
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets._2D
+    className: Camera2DFollow
   - hash:
       serializedVersion: 2
       Hash: 9ebc0a3016506a0cbb7e0306dfcb9497
@@ -526,6 +587,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
     className: TMP_SubMeshUI
+  - hash:
+      serializedVersion: 2
+      Hash: 6b89f51bce2dc664cf69abff9f734991
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Utility
+    className: FPSCounter
+  - hash:
+      serializedVersion: 2
+      Hash: 9f647976fddd662513c4620120ef3518
+    assemblyName: Assembly-CSharp
+    namespaceName: UnityStandardAssets.SceneUtils
+    className: ParticleSceneControls
   - hash:
       serializedVersion: 2
       Hash: 385b472b6a78f1ea942c23731bac8266
@@ -546,10 +619,22 @@ ScriptsOnlyBuild:
     className: StateGraphAsset
   - hash:
       serializedVersion: 2
+      Hash: 768b2700c7d0c5b799d55bb7eaf9ae69
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Vehicles.Ball
+    className: Ball
+  - hash:
+      serializedVersion: 2
       Hash: febcfbf0a0d85e37808a3740e3c2c6fa
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
     className: MarkerTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 50279e55047ad5d512c6711aaa3b1c1c
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.CrossPlatformInput
+    className: InputAxisScrollbar
   - hash:
       serializedVersion: 2
       Hash: 568292fb7ea6c4f7a667e5ff76bc7e85
@@ -570,6 +655,12 @@ ScriptsOnlyBuild:
     className: PanelRaycaster
   - hash:
       serializedVersion: 2
+      Hash: 0dd3441794baf3330fcada6fff895aa2
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Utility
+    className: PlatformSpecificContent
+  - hash:
+      serializedVersion: 2
       Hash: 7e12302f66e3c8ed5bcfea4ce65fccea
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -580,6 +671,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: TMPro.Examples
     className: TMP_TextSelector_A
+  - hash:
+      serializedVersion: 2
+      Hash: 7ceb2f5585428e34114b184321067971
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.CrossPlatformInput
+    className: Joystick
   - hash:
       serializedVersion: 2
       Hash: 1deda86fe7ffd8587afcfe68a02d034c
@@ -618,6 +715,12 @@ ScriptsOnlyBuild:
     className: UnityOnBeginDragMessageListener
   - hash:
       serializedVersion: 2
+      Hash: a00c9ba50c843677a9199dd7c850bd98
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Cameras
+    className: TargetFieldOfView
+  - hash:
+      serializedVersion: 2
       Hash: 0dd14e314956b0d0d83ffcffe60aa46f
     assemblyName: Assembly-CSharp
     namespaceName: TMPro
@@ -628,6 +731,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
     className: GroupTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 52829b566d23662f8c29edb0c829bbef
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Characters.ThirdPerson
+    className: ThirdPersonUserControl
   - hash:
       serializedVersion: 2
       Hash: f669be52680c88846b2093fd41d1e06e
@@ -666,10 +775,28 @@ ScriptsOnlyBuild:
     className: UnityOnMouseExitMessageListener
   - hash:
       serializedVersion: 2
+      Hash: afd95466b2ce150f5a50438371278b67
+    assemblyName: Assembly-CSharp
+    namespaceName: UnityStandardAssets.SceneUtils
+    className: SlowMoButton
+  - hash:
+      serializedVersion: 2
       Hash: b5c35adc76edeecddef047dc0a21c4c9
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: RefreshAmmoUI
+  - hash:
+      serializedVersion: 2
+      Hash: b5d2dc36007a4bda820387efbdc8da13
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Vehicles.Aeroplane
+    className: AeroplaneUserControl4Axis
+  - hash:
+      serializedVersion: 2
+      Hash: 3185b95c930d24a2b657a4fe4523a235
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Cameras
+    className: AutoCam
   - hash:
       serializedVersion: 2
       Hash: c78ed13f6b5a632d70d4f73f56ad81f2
@@ -688,6 +815,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: TMPro.Examples
     className: ObjectSpin
+  - hash:
+      serializedVersion: 2
+      Hash: 17acf003ed08d5b69265921a8e3e510e
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Utility
+    className: SimpleActivatorMenu
   - hash:
       serializedVersion: 2
       Hash: e6ee7dccba41ae87d10e3d922c6cb71c
@@ -714,10 +847,34 @@ ScriptsOnlyBuild:
     className: Benchmark03
   - hash:
       serializedVersion: 2
+      Hash: 2a0c988f68e3311d5a21b2ee8ea7ac31
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PauseMenu
+  - hash:
+      serializedVersion: 2
+      Hash: d3ed3ba13ad89b7f1cd6e7c009c124fb
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Utility
+    className: DragRigidbody
+  - hash:
+      serializedVersion: 2
       Hash: ee34255e3e86289bde9bad5e07b84cbc
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnScrollRectValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 48770240e3bc952c255b967633454124
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Utility
+    className: ObjectResetter
+  - hash:
+      serializedVersion: 2
+      Hash: 36aff7d710d438a4c6d0c0cf9793b9e9
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Characters.ThirdPerson
+    className: AICharacterControl
   - hash:
       serializedVersion: 2
       Hash: 952844f3696b053c2999cfc98bed0a64
@@ -732,10 +889,34 @@ ScriptsOnlyBuild:
     className: Image
   - hash:
       serializedVersion: 2
+      Hash: b64144b75852b773a021e31f5b1c4fa1
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Effects
+    className: ExplosionPhysicsForce
+  - hash:
+      serializedVersion: 2
+      Hash: 8c1feeec2ad5467318ea2a9376c14ab4
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Utility
+    className: TimedObjectActivator
+  - hash:
+      serializedVersion: 2
+      Hash: 22941e22f5a762fc6364ab03b97aa5d1
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Vehicles.Car
+    className: CarAIControl
+  - hash:
+      serializedVersion: 2
       Hash: 7bdff9e91edfd9600f92a185def7e34a
     assemblyName: Unity.VisualScripting.Flow
     namespaceName: Unity.VisualScripting
     className: ScriptMachine
+  - hash:
+      serializedVersion: 2
+      Hash: 47ee1b321158a4c8a4be7db19a09f24f
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: CameraSwitch
   - hash:
       serializedVersion: 2
       Hash: 0a3f328f3ea906bbbcf794f4c27ee59d
@@ -762,6 +943,12 @@ ScriptsOnlyBuild:
     className: HorizontalLayoutGroup
   - hash:
       serializedVersion: 2
+      Hash: 15e2d2de2b2ad7aa8332c7a228dcfaa2
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Effects
+    className: ExplosionFireAndDebris
+  - hash:
+      serializedVersion: 2
       Hash: 0d37acc7a2bca7cd94ea67bedb7ed7f9
     assemblyName: Assembly-CSharp
     namespaceName: 
@@ -774,10 +961,22 @@ ScriptsOnlyBuild:
     className: ButtonQuit
   - hash:
       serializedVersion: 2
+      Hash: 015ff8f24c94016440cc2c879d29f09e
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Water
+    className: SpecularLighting
+  - hash:
+      serializedVersion: 2
       Hash: c4de0ff7e075dd89c9fed5913dd775d2
     assemblyName: Assembly-CSharp
     namespaceName: TMPro
     className: TMP_PhoneNumberValidator
+  - hash:
+      serializedVersion: 2
+      Hash: 173a1f99e9768b03c43896f0474f2048
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Cameras
+    className: LookatTarget
   - hash:
       serializedVersion: 2
       Hash: ff76cf6cf52b4db7b95af6ffadca9288
@@ -802,6 +1001,18 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.EventSystems
     className: EventSystem
+  - hash:
+      serializedVersion: 2
+      Hash: 4ec0914b169c326ce0c3af870833f00a
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Vehicles.Car
+    className: BrakeLight
+  - hash:
+      serializedVersion: 2
+      Hash: 9c5d1b4e4b510f3ed1317316f9a81f2a
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.CrossPlatformInput
+    className: TouchPad
   - hash:
       serializedVersion: 2
       Hash: d7c8092511063e0dae8106bfc8ed63dd
@@ -858,6 +1069,24 @@ ScriptsOnlyBuild:
     className: LoadScene
   - hash:
       serializedVersion: 2
+      Hash: a7d5961bd2b4b89223ef2e5bd326840b
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Vehicles.Car
+    className: Mudguard
+  - hash:
+      serializedVersion: 2
+      Hash: 35255e2dda170c31e1a12e7b2b22b209
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Utility
+    className: DynamicShadowSettings
+  - hash:
+      serializedVersion: 2
+      Hash: a12b7b6607227c1851cc13529842e747
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Cameras
+    className: ProtectCameraFromWallClip
+  - hash:
+      serializedVersion: 2
       Hash: 915204dac8acad99f076d6e72ada0a0f
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
@@ -868,6 +1097,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: TMPro.Examples
     className: VertexShakeB
+  - hash:
+      serializedVersion: 2
+      Hash: 80913aa4de45af840229f43a348e0699
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Utility
+    className: AutoMoveAndRotate
   - hash:
       serializedVersion: 2
       Hash: 4663ce278bf334bc7cb334ea8061129e
@@ -894,16 +1129,46 @@ ScriptsOnlyBuild:
     className: ControlTrack
   - hash:
       serializedVersion: 2
+      Hash: 94f9477830c4bf39a53ef2670c9b845e
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets._2D
+    className: CameraFollow
+  - hash:
+      serializedVersion: 2
       Hash: b30c8635462e66ac20f4241106119f77
     assemblyName: Unity.VisualScripting.State
     namespaceName: Unity.VisualScripting
     className: StateMachine
   - hash:
       serializedVersion: 2
+      Hash: d6e556dd8d5405a43ed30b86d854ed2c
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Vehicles.Ball
+    className: BallUserControl
+  - hash:
+      serializedVersion: 2
+      Hash: a09714c929e60d09e94a916c8eec9cb1
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: LB_CameraMove
+  - hash:
+      serializedVersion: 2
+      Hash: e4d05c8956e63ade91ddb8af130fcac6
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Effects
+    className: Explosive
+  - hash:
+      serializedVersion: 2
       Hash: 3b5263a98bcc71d9a9d1d78a31b34ced
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
     className: TMP_SelectionCaret
+  - hash:
+      serializedVersion: 2
+      Hash: 90343c7a5bd61095376074f2b4ee1af7
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Effects
+    className: SmokeParticles
   - hash:
       serializedVersion: 2
       Hash: d41ab9b5ea92474f9c0a6937a0607ce1
@@ -960,6 +1225,24 @@ ScriptsOnlyBuild:
     className: EventTrigger
   - hash:
       serializedVersion: 2
+      Hash: 85e13764fb7bf49fdc0ed9cdbb33de90
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Water
+    className: Water
+  - hash:
+      serializedVersion: 2
+      Hash: 517af1a362de76e7a054250199a40f67
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Characters.FirstPerson
+    className: HeadBob
+  - hash:
+      serializedVersion: 2
+      Hash: 297aef046cf513336ab8c3da5ec57de1
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Effects
+    className: Hose
+  - hash:
+      serializedVersion: 2
       Hash: ad49e20f31ed572e586aa8bbaafb591b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -1008,6 +1291,12 @@ ScriptsOnlyBuild:
     className: MacroScriptableObject
   - hash:
       serializedVersion: 2
+      Hash: c705da6df894b18228f5fe7a924fb5e8
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets._2D
+    className: PlatformerCharacter2D
+  - hash:
+      serializedVersion: 2
       Hash: 5874b789cd9832847c61ebfa803213af
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UIElements
@@ -1020,6 +1309,12 @@ ScriptsOnlyBuild:
     className: UnityOnTriggerStay2DMessageListener
   - hash:
       serializedVersion: 2
+      Hash: a919200968b54c7d8ed40499cbdfab44
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Utility
+    className: WaypointProgressTracker
+  - hash:
+      serializedVersion: 2
       Hash: d2ecd94550edf1b56aff07b1f4e41c57
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -1030,6 +1325,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: Dropdown
+  - hash:
+      serializedVersion: 2
+      Hash: bea41ae2e34e712048b8b5ff5a38804e
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: 
+    className: AlphaButtonClickMask
   - hash:
       serializedVersion: 2
       Hash: 46c4bb52b90f5ec7500d6ec45a7ecd86
@@ -1050,10 +1351,28 @@ ScriptsOnlyBuild:
     className: SignalAsset
   - hash:
       serializedVersion: 2
+      Hash: 0cb617436f3b900302d4e4ff26a2eceb
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: SceneAndURLLoader
+  - hash:
+      serializedVersion: 2
+      Hash: f5d97f820d95919426890904bf3fbe1a
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Cameras
+    className: HandHeldCam
+  - hash:
+      serializedVersion: 2
       Hash: f295412bc00b58b9095a71e9764cc886
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
     className: AudioTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 932f371ce161869bb64e829af44f270c
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Water
+    className: WaterBasic
   - hash:
       serializedVersion: 2
       Hash: 8e6dc3d79712ca4934f6d50c80f010b1
@@ -1068,6 +1387,12 @@ ScriptsOnlyBuild:
     className: VariablesAsset
   - hash:
       serializedVersion: 2
+      Hash: ac1519e6d64aa0970781a02bf631504b
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Vehicles.Car
+    className: SkidTrail
+  - hash:
+      serializedVersion: 2
       Hash: cf32d98954e63b8e30e9334b152e9b8e
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.EventSystems
@@ -1080,10 +1405,28 @@ ScriptsOnlyBuild:
     className: Text
   - hash:
       serializedVersion: 2
+      Hash: 8715090994899b2875fabbeccd62b388
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Vehicles.Car
+    className: CarController
+  - hash:
+      serializedVersion: 2
       Hash: 37427961944786d547be0a8f29df0a81
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Pistol
+  - hash:
+      serializedVersion: 2
+      Hash: 28534eba54250bc0fd447595d4a56442
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Vehicles.Aeroplane
+    className: AeroplaneAudio
+  - hash:
+      serializedVersion: 2
+      Hash: e7ce5baa309e8898669cc1a1bc66e955
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Vehicles.Aeroplane
+    className: LandingGear
   - hash:
       serializedVersion: 2
       Hash: d5cd7f207e91ca8336c65a577a6fb2a0
@@ -1096,6 +1439,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: ButtonSceneLoader2
+  - hash:
+      serializedVersion: 2
+      Hash: f4e6883bf9da02dd8933121d9c96b806
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Characters.ThirdPerson
+    className: ThirdPersonCharacter
   - hash:
       serializedVersion: 2
       Hash: f45600bcc886206dd55a3208474aad61
@@ -1114,6 +1463,18 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: Selectable
+  - hash:
+      serializedVersion: 2
+      Hash: edb23c0589b8020f3de6df2f00ad93e9
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: LevelReset
+  - hash:
+      serializedVersion: 2
+      Hash: 1f40194245e77e87b2cd90a6acb6fc71
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Water
+    className: Displace
   - hash:
       serializedVersion: 2
       Hash: 1321993db8249e1e05e1e0492b2bbdc3
@@ -1158,6 +1519,12 @@ ScriptsOnlyBuild:
     className: UnityOnPointerExitMessageListener
   - hash:
       serializedVersion: 2
+      Hash: d889dfaccb726bbb28f18b61a1176d36
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Vehicles.Aeroplane
+    className: AeroplaneControlSurfaceAnimator
+  - hash:
+      serializedVersion: 2
       Hash: 7e4bc5cec205707094743e5d0d4a21a9
     assemblyName: Assembly-CSharp
     namespaceName: 
@@ -1176,6 +1543,12 @@ ScriptsOnlyBuild:
     className: GridLayoutGroup
   - hash:
       serializedVersion: 2
+      Hash: e126ee9c3101f2e9f8fd9694dfad14d3
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Characters.FirstPerson
+    className: FirstPersonController
+  - hash:
+      serializedVersion: 2
       Hash: 191cd500c627cd6682ef6f70b8e47f2c
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -1186,6 +1559,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnDeselectMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 04851de7c6fb56884e3fd306c414c794
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Vehicles.Car
+    className: Suspension
   - hash:
       serializedVersion: 2
       Hash: 4166580c620718548959a77fa7b43fc1
@@ -1212,6 +1591,24 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
+      Hash: 687ff828b9988fd700f473cbf261ac46
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Utility
+    className: AutoMobileShaderSwitch
+  - hash:
+      serializedVersion: 2
+      Hash: ed87794927a7c621f2630ea89dc43ce7
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Vehicles.Car
+    className: CarUserControl
+  - hash:
+      serializedVersion: 2
+      Hash: 88692a060a85abfa62d3f91eabbcc8c9
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: 
+    className: EventSystemChecker
+  - hash:
+      serializedVersion: 2
       Hash: 11a492830b189fafb9ed2f7afa464c56
     assemblyName: Assembly-CSharp
     namespaceName: TMPro.Examples
@@ -1228,6 +1625,24 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
     className: TMP_StyleSheet
+  - hash:
+      serializedVersion: 2
+      Hash: cc78c8b69ff546418a36af391346200a
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Cameras
+    className: FreeLookCam
+  - hash:
+      serializedVersion: 2
+      Hash: 98340b137b2c68765166d90824831f52
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Effects
+    className: AfterburnerPhysicsForce
+  - hash:
+      serializedVersion: 2
+      Hash: c512c746cde23bb0ec778180672faded
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Water
+    className: PlanarReflection
   - hash:
       serializedVersion: 2
       Hash: c9b1ea3bf987a2e780a24849503ca72e
@@ -1302,10 +1717,28 @@ ScriptsOnlyBuild:
     className: CanvasScaler
   - hash:
       serializedVersion: 2
+      Hash: 795fb569b8439a260e53a9562884326e
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Utility
+    className: TimedObjectDestructor
+  - hash:
+      serializedVersion: 2
       Hash: 17142b03663387290480c82303274c02
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnPointerEnterMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: ed0f6c922884a9f5523ee9a852a48959
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Utility
+    className: FollowTarget
+  - hash:
+      serializedVersion: 2
+      Hash: 1f08f85db547f777a8404ca718b78330
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: 
+    className: ForcedReset
   - hash:
       serializedVersion: 2
       Hash: e2734bcc7b3e94776ade5d59f54fec1e
@@ -1314,10 +1747,34 @@ ScriptsOnlyBuild:
     className: TMP_TextSelector_B
   - hash:
       serializedVersion: 2
+      Hash: 0af302b9c0cc691243cb7af0ac7cddd6
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.CrossPlatformInput
+    className: AxisTouchButton
+  - hash:
+      serializedVersion: 2
       Hash: 00eef92bf387da2c9009267123d9d674
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnTriggerExit2DMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 95848db7298455a94ff31bd171516ac2
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Vehicles.Car
+    className: WheelEffects
+  - hash:
+      serializedVersion: 2
+      Hash: d288b91e589b158993de63a45b54fe6b
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Vehicles.Car
+    className: CarSelfRighting
+  - hash:
+      serializedVersion: 2
+      Hash: ea1d7a985d10a604de40565fe37327b0
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.CrossPlatformInput
+    className: ButtonHandler
   - hash:
       serializedVersion: 2
       Hash: 28fd3d045acc780719a17f02073eb448
@@ -1332,13 +1789,19 @@ ScriptsOnlyBuild:
     className: TextMeshProFloatingText
   - hash:
       serializedVersion: 2
+      Hash: 426a6cc5d8478f970ad4aafff7684187
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Characters.FirstPerson
+    className: RigidbodyFirstPersonController
+  - hash:
+      serializedVersion: 2
       Hash: ca7965796a6fc0e5baad4cb19f5b5ded
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnJointBreak2DMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 009b79f559ad13d714f956307167716f
+      Hash: 13a0c28da9d3d703a8767bbc6b6f82c1
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: ItemsData
@@ -1348,6 +1811,30 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: TMPro.Examples
     className: TMP_ExampleScript_01
+  - hash:
+      serializedVersion: 2
+      Hash: 406838c0a022a736c5c58a6706a811b6
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets._2D
+    className: Platformer2DUserControl
+  - hash:
+      serializedVersion: 2
+      Hash: f7293c250006a0a9ec49e78f5285aa11
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Effects
+    className: FireLight
+  - hash:
+      serializedVersion: 2
+      Hash: 742037f837c8ddcca95b2e1ad6a7525c
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Water
+    className: WaterBase
+  - hash:
+      serializedVersion: 2
+      Hash: c50527593dcdf86ecfe5bb4548ccb411
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Effects
+    className: WaterHoseParticles
   - hash:
       serializedVersion: 2
       Hash: c4ae0ec287bc3cde0bc98e1a65f9cef7
@@ -1404,6 +1891,12 @@ ScriptsOnlyBuild:
     className: Mask
   - hash:
       serializedVersion: 2
+      Hash: 178c48ace9f41a0a361cff476633ecb2
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Water
+    className: GerstnerDisplace
+  - hash:
+      serializedVersion: 2
       Hash: 7053e305cdc1eb560f4c3be49d3b5136
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.EventSystems
@@ -1440,6 +1933,12 @@ ScriptsOnlyBuild:
     className: TMP_FontAsset
   - hash:
       serializedVersion: 2
+      Hash: bac7691e31059c69298e0fef6a031074
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Utility
+    className: SimpleMouseRotator
+  - hash:
+      serializedVersion: 2
       Hash: 09bbdd47b986dbf04620e15bfbc68cb7
     assemblyName: Assembly-CSharp
     namespaceName: 
@@ -1456,6 +1955,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
     className: AudioPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 8923f9f5eeca6d5059aaf4c91d5b0261
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Vehicles.Aeroplane
+    className: AeroplaneAiControl
   - hash:
       serializedVersion: 2
       Hash: 9fb1c3ab48b256d508ecddd967f98652
@@ -1482,10 +1987,22 @@ ScriptsOnlyBuild:
     className: TextMeshPro
   - hash:
       serializedVersion: 2
+      Hash: 3b32b3d10bfd3b22e7097efef08595d9
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Effects
+    className: ParticleSystemMultiplier
+  - hash:
+      serializedVersion: 2
       Hash: dc31d211c7459841fe4f406ae2e51480
     assemblyName: Assembly-CSharp
     namespaceName: TMPro.Examples
     className: TextConsoleSimulator
+  - hash:
+      serializedVersion: 2
+      Hash: 492e9f38876d6b6f29f99ccb3c937a72
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Vehicles.Car
+    className: CarAudio
   - hash:
       serializedVersion: 2
       Hash: aa349b22cd61b9e8488d736f82590d6b
@@ -1500,6 +2017,12 @@ ScriptsOnlyBuild:
     className: Toggle
   - hash:
       serializedVersion: 2
+      Hash: 510c05b7992604d47c50a09d620f059d
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Utility
+    className: WaypointCircuit
+  - hash:
+      serializedVersion: 2
       Hash: 13f262cc0741566a7ab72682984bc3e1
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
@@ -1510,6 +2033,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: TMPro.Examples
     className: VertexJitter
+  - hash:
+      serializedVersion: 2
+      Hash: e1b8824aa429009f357f4d39fe02171a
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Effects
+    className: ExtinguishableParticleSystem
   - hash:
       serializedVersion: 2
       Hash: 9a174471d4db2c0c6d3ac47d2f818db1
@@ -1536,6 +2065,24 @@ ScriptsOnlyBuild:
     className: UnityOnJointBreakMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 034c09c519b2568d46a9f81e63c54a8c
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Vehicles.Aeroplane
+    className: AeroplanePropellerAnimator
+  - hash:
+      serializedVersion: 2
+      Hash: 00e357d528c566a888d2bc1887ff27d6
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Vehicles.Aeroplane
+    className: AeroplaneController
+  - hash:
+      serializedVersion: 2
+      Hash: 6a2c4b5b4f822c61534871adc17cab0b
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Vehicles.Aeroplane
+    className: JetParticleEffect
+  - hash:
+      serializedVersion: 2
       Hash: e23d2210701e34e6850023cabe554c1f
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -1560,6 +2107,12 @@ ScriptsOnlyBuild:
     className: UnityOnBecameInvisibleMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 00f2ccf6092e979f4baaf0bd01b694c4
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: UnityStandardAssets.Utility
+    className: SmoothFollow
+  - hash:
+      serializedVersion: 2
       Hash: a90f6a00b23520788be7d89ee3b0773d
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
@@ -1570,534 +2123,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 17acf003ed08d5b69265921a8e3e510e
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Utility
-    className: SimpleActivatorMenu
-  - hash:
-      serializedVersion: 2
-      Hash: c98ae3467e2c21e018cfd77be9caaf8a
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Vehicles.Aeroplane
-    className: AeroplaneUserControl2Axis
-  - hash:
-      serializedVersion: 2
-      Hash: 84d80266c01a50d019053c1ad8ece535
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Water
-    className: WaterTile
-  - hash:
-      serializedVersion: 2
-      Hash: c908bc973de30e0bd6d9b37972f687e8
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Utility
-    className: ParticleSystemDestroyer
-  - hash:
-      serializedVersion: 2
-      Hash: 8216cbac32f9438983d65e14cef8cb51
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets._2D
-    className: Restarter
-  - hash:
-      serializedVersion: 2
-      Hash: d1cdda2a3f17cc21b35f075e1a00a429
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.CrossPlatformInput
-    className: TiltInput
-  - hash:
-      serializedVersion: 2
-      Hash: 44bac1665297a414742127e548f7823f
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: MenuSceneLoader
-  - hash:
-      serializedVersion: 2
-      Hash: 2d6228f45e3ea9b55a0972b1a3d17b39
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets._2D
-    className: Camera2DFollow
-  - hash:
-      serializedVersion: 2
-      Hash: 6b89f51bce2dc664cf69abff9f734991
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Utility
-    className: FPSCounter
-  - hash:
-      serializedVersion: 2
-      Hash: 9f647976fddd662513c4620120ef3518
-    assemblyName: Assembly-CSharp
-    namespaceName: UnityStandardAssets.SceneUtils
-    className: ParticleSceneControls
-  - hash:
-      serializedVersion: 2
-      Hash: 768b2700c7d0c5b799d55bb7eaf9ae69
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Vehicles.Ball
-    className: Ball
-  - hash:
-      serializedVersion: 2
-      Hash: 50279e55047ad5d512c6711aaa3b1c1c
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.CrossPlatformInput
-    className: InputAxisScrollbar
-  - hash:
-      serializedVersion: 2
-      Hash: 0dd3441794baf3330fcada6fff895aa2
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Utility
-    className: PlatformSpecificContent
-  - hash:
-      serializedVersion: 2
-      Hash: 7ceb2f5585428e34114b184321067971
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.CrossPlatformInput
-    className: Joystick
-  - hash:
-      serializedVersion: 2
-      Hash: a00c9ba50c843677a9199dd7c850bd98
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Cameras
-    className: TargetFieldOfView
-  - hash:
-      serializedVersion: 2
-      Hash: 52829b566d23662f8c29edb0c829bbef
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Characters.ThirdPerson
-    className: ThirdPersonUserControl
-  - hash:
-      serializedVersion: 2
-      Hash: afd95466b2ce150f5a50438371278b67
-    assemblyName: Assembly-CSharp
-    namespaceName: UnityStandardAssets.SceneUtils
-    className: SlowMoButton
-  - hash:
-      serializedVersion: 2
-      Hash: 3185b95c930d24a2b657a4fe4523a235
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Cameras
-    className: AutoCam
-  - hash:
-      serializedVersion: 2
-      Hash: b5d2dc36007a4bda820387efbdc8da13
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Vehicles.Aeroplane
-    className: AeroplaneUserControl4Axis
-  - hash:
-      serializedVersion: 2
-      Hash: 2a0c988f68e3311d5a21b2ee8ea7ac31
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: PauseMenu
-  - hash:
-      serializedVersion: 2
-      Hash: d3ed3ba13ad89b7f1cd6e7c009c124fb
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Utility
-    className: DragRigidbody
-  - hash:
-      serializedVersion: 2
-      Hash: 48770240e3bc952c255b967633454124
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Utility
-    className: ObjectResetter
-  - hash:
-      serializedVersion: 2
-      Hash: 36aff7d710d438a4c6d0c0cf9793b9e9
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Characters.ThirdPerson
-    className: AICharacterControl
-  - hash:
-      serializedVersion: 2
-      Hash: b64144b75852b773a021e31f5b1c4fa1
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Effects
-    className: ExplosionPhysicsForce
-  - hash:
-      serializedVersion: 2
-      Hash: 8c1feeec2ad5467318ea2a9376c14ab4
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Utility
-    className: TimedObjectActivator
-  - hash:
-      serializedVersion: 2
-      Hash: 22941e22f5a762fc6364ab03b97aa5d1
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Vehicles.Car
-    className: CarAIControl
-  - hash:
-      serializedVersion: 2
-      Hash: 47ee1b321158a4c8a4be7db19a09f24f
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: CameraSwitch
-  - hash:
-      serializedVersion: 2
-      Hash: 15e2d2de2b2ad7aa8332c7a228dcfaa2
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Effects
-    className: ExplosionFireAndDebris
-  - hash:
-      serializedVersion: 2
-      Hash: 015ff8f24c94016440cc2c879d29f09e
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Water
-    className: SpecularLighting
-  - hash:
-      serializedVersion: 2
-      Hash: 173a1f99e9768b03c43896f0474f2048
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Cameras
-    className: LookatTarget
-  - hash:
-      serializedVersion: 2
-      Hash: 4ec0914b169c326ce0c3af870833f00a
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Vehicles.Car
-    className: BrakeLight
-  - hash:
-      serializedVersion: 2
-      Hash: 9c5d1b4e4b510f3ed1317316f9a81f2a
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.CrossPlatformInput
-    className: TouchPad
-  - hash:
-      serializedVersion: 2
-      Hash: a7d5961bd2b4b89223ef2e5bd326840b
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Vehicles.Car
-    className: Mudguard
-  - hash:
-      serializedVersion: 2
-      Hash: 35255e2dda170c31e1a12e7b2b22b209
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Utility
-    className: DynamicShadowSettings
-  - hash:
-      serializedVersion: 2
-      Hash: a12b7b6607227c1851cc13529842e747
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Cameras
-    className: ProtectCameraFromWallClip
-  - hash:
-      serializedVersion: 2
-      Hash: 80913aa4de45af840229f43a348e0699
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Utility
-    className: AutoMoveAndRotate
-  - hash:
-      serializedVersion: 2
-      Hash: 94f9477830c4bf39a53ef2670c9b845e
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets._2D
-    className: CameraFollow
-  - hash:
-      serializedVersion: 2
-      Hash: d6e556dd8d5405a43ed30b86d854ed2c
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Vehicles.Ball
-    className: BallUserControl
-  - hash:
-      serializedVersion: 2
-      Hash: e4d05c8956e63ade91ddb8af130fcac6
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Effects
-    className: Explosive
-  - hash:
-      serializedVersion: 2
-      Hash: 90343c7a5bd61095376074f2b4ee1af7
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Effects
-    className: SmokeParticles
-  - hash:
-      serializedVersion: 2
-      Hash: 85e13764fb7bf49fdc0ed9cdbb33de90
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Water
-    className: Water
-  - hash:
-      serializedVersion: 2
-      Hash: 517af1a362de76e7a054250199a40f67
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Characters.FirstPerson
-    className: HeadBob
-  - hash:
-      serializedVersion: 2
-      Hash: 297aef046cf513336ab8c3da5ec57de1
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Effects
-    className: Hose
-  - hash:
-      serializedVersion: 2
-      Hash: c705da6df894b18228f5fe7a924fb5e8
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets._2D
-    className: PlatformerCharacter2D
-  - hash:
-      serializedVersion: 2
-      Hash: a919200968b54c7d8ed40499cbdfab44
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Utility
-    className: WaypointProgressTracker
-  - hash:
-      serializedVersion: 2
-      Hash: bea41ae2e34e712048b8b5ff5a38804e
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: 
-    className: AlphaButtonClickMask
-  - hash:
-      serializedVersion: 2
-      Hash: 0cb617436f3b900302d4e4ff26a2eceb
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: SceneAndURLLoader
-  - hash:
-      serializedVersion: 2
-      Hash: f5d97f820d95919426890904bf3fbe1a
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Cameras
-    className: HandHeldCam
-  - hash:
-      serializedVersion: 2
-      Hash: 932f371ce161869bb64e829af44f270c
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Water
-    className: WaterBasic
-  - hash:
-      serializedVersion: 2
-      Hash: ac1519e6d64aa0970781a02bf631504b
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Vehicles.Car
-    className: SkidTrail
-  - hash:
-      serializedVersion: 2
-      Hash: 8715090994899b2875fabbeccd62b388
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Vehicles.Car
-    className: CarController
-  - hash:
-      serializedVersion: 2
-      Hash: 28534eba54250bc0fd447595d4a56442
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Vehicles.Aeroplane
-    className: AeroplaneAudio
-  - hash:
-      serializedVersion: 2
-      Hash: e7ce5baa309e8898669cc1a1bc66e955
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Vehicles.Aeroplane
-    className: LandingGear
-  - hash:
-      serializedVersion: 2
-      Hash: f4e6883bf9da02dd8933121d9c96b806
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Characters.ThirdPerson
-    className: ThirdPersonCharacter
-  - hash:
-      serializedVersion: 2
-      Hash: edb23c0589b8020f3de6df2f00ad93e9
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: LevelReset
-  - hash:
-      serializedVersion: 2
-      Hash: 1f40194245e77e87b2cd90a6acb6fc71
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Water
-    className: Displace
-  - hash:
-      serializedVersion: 2
-      Hash: d889dfaccb726bbb28f18b61a1176d36
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Vehicles.Aeroplane
-    className: AeroplaneControlSurfaceAnimator
-  - hash:
-      serializedVersion: 2
-      Hash: e126ee9c3101f2e9f8fd9694dfad14d3
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Characters.FirstPerson
-    className: FirstPersonController
-  - hash:
-      serializedVersion: 2
-      Hash: 04851de7c6fb56884e3fd306c414c794
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Vehicles.Car
-    className: Suspension
-  - hash:
-      serializedVersion: 2
-      Hash: 687ff828b9988fd700f473cbf261ac46
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Utility
-    className: AutoMobileShaderSwitch
-  - hash:
-      serializedVersion: 2
-      Hash: ed87794927a7c621f2630ea89dc43ce7
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Vehicles.Car
-    className: CarUserControl
-  - hash:
-      serializedVersion: 2
-      Hash: 88692a060a85abfa62d3f91eabbcc8c9
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: 
-    className: EventSystemChecker
-  - hash:
-      serializedVersion: 2
-      Hash: cc78c8b69ff546418a36af391346200a
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Cameras
-    className: FreeLookCam
-  - hash:
-      serializedVersion: 2
-      Hash: 98340b137b2c68765166d90824831f52
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Effects
-    className: AfterburnerPhysicsForce
-  - hash:
-      serializedVersion: 2
-      Hash: c512c746cde23bb0ec778180672faded
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Water
-    className: PlanarReflection
-  - hash:
-      serializedVersion: 2
-      Hash: 795fb569b8439a260e53a9562884326e
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Utility
-    className: TimedObjectDestructor
-  - hash:
-      serializedVersion: 2
-      Hash: ed0f6c922884a9f5523ee9a852a48959
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Utility
-    className: FollowTarget
-  - hash:
-      serializedVersion: 2
-      Hash: 1f08f85db547f777a8404ca718b78330
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: 
-    className: ForcedReset
-  - hash:
-      serializedVersion: 2
-      Hash: 0af302b9c0cc691243cb7af0ac7cddd6
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.CrossPlatformInput
-    className: AxisTouchButton
-  - hash:
-      serializedVersion: 2
-      Hash: 95848db7298455a94ff31bd171516ac2
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Vehicles.Car
-    className: WheelEffects
-  - hash:
-      serializedVersion: 2
-      Hash: d288b91e589b158993de63a45b54fe6b
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Vehicles.Car
-    className: CarSelfRighting
-  - hash:
-      serializedVersion: 2
-      Hash: ea1d7a985d10a604de40565fe37327b0
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.CrossPlatformInput
-    className: ButtonHandler
-  - hash:
-      serializedVersion: 2
-      Hash: 426a6cc5d8478f970ad4aafff7684187
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Characters.FirstPerson
-    className: RigidbodyFirstPersonController
-  - hash:
-      serializedVersion: 2
-      Hash: 406838c0a022a736c5c58a6706a811b6
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets._2D
-    className: Platformer2DUserControl
-  - hash:
-      serializedVersion: 2
-      Hash: f7293c250006a0a9ec49e78f5285aa11
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Effects
-    className: FireLight
-  - hash:
-      serializedVersion: 2
-      Hash: 742037f837c8ddcca95b2e1ad6a7525c
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Water
-    className: WaterBase
-  - hash:
-      serializedVersion: 2
-      Hash: c50527593dcdf86ecfe5bb4548ccb411
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Effects
-    className: WaterHoseParticles
-  - hash:
-      serializedVersion: 2
-      Hash: 178c48ace9f41a0a361cff476633ecb2
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Water
-    className: GerstnerDisplace
-  - hash:
-      serializedVersion: 2
-      Hash: bac7691e31059c69298e0fef6a031074
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Utility
-    className: SimpleMouseRotator
-  - hash:
-      serializedVersion: 2
-      Hash: 8923f9f5eeca6d5059aaf4c91d5b0261
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Vehicles.Aeroplane
-    className: AeroplaneAiControl
-  - hash:
-      serializedVersion: 2
-      Hash: 3b32b3d10bfd3b22e7097efef08595d9
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Effects
-    className: ParticleSystemMultiplier
-  - hash:
-      serializedVersion: 2
-      Hash: 492e9f38876d6b6f29f99ccb3c937a72
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Vehicles.Car
-    className: CarAudio
-  - hash:
-      serializedVersion: 2
-      Hash: 510c05b7992604d47c50a09d620f059d
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Utility
-    className: WaypointCircuit
-  - hash:
-      serializedVersion: 2
-      Hash: e1b8824aa429009f357f4d39fe02171a
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Effects
-    className: ExtinguishableParticleSystem
-  - hash:
-      serializedVersion: 2
-      Hash: 034c09c519b2568d46a9f81e63c54a8c
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Vehicles.Aeroplane
-    className: AeroplanePropellerAnimator
-  - hash:
-      serializedVersion: 2
-      Hash: 00e357d528c566a888d2bc1887ff27d6
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Vehicles.Aeroplane
-    className: AeroplaneController
-  - hash:
-      serializedVersion: 2
-      Hash: 6a2c4b5b4f822c61534871adc17cab0b
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Vehicles.Aeroplane
-    className: JetParticleEffect
-  - hash:
-      serializedVersion: 2
-      Hash: 00f2ccf6092e979f4baaf0bd01b694c4
-    assemblyName: Assembly-CSharp-firstpass
-    namespaceName: UnityStandardAssets.Utility
-    className: SmoothFollow
   - hash:
       serializedVersion: 2
       Hash: c8cf4d2a60a4845946bbb533918b1bf3
@@ -2116,6 +2141,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp-firstpass
     namespaceName: UnityStandardAssets.CrossPlatformInput
     className: MobileControlRig
+  - hash:
+      serializedVersion: 2
+      Hash: a3b92ac9a95ad9e5c8cccf9da2faa528
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: BotScript
   platform: 19
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
