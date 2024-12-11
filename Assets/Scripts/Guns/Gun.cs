@@ -10,6 +10,8 @@ public class Gun : MonoBehaviour
     [SerializeField] protected Transform shotOrigin;
     [SerializeField] protected Transform shotDir;
     [SerializeField] protected int MaxAmmo;
+    [SerializeField] protected float damage;
+    [SerializeField] protected GameObject bullet;
     protected float rechargeTime;
     protected float shotPause;
     protected int currentAmmo;
@@ -76,24 +78,34 @@ public class Gun : MonoBehaviour
     // Funkce pro střelbu
     protected virtual void Shoot()
     {
-        Debug.Log("Shot!");
         timeSinceLastShot = 0;
         animator.SetTrigger("Shot");
         RaycastHit hit;
 
-        // Zasáhne cíl, pokud je v cestě
-        if (Physics.Raycast(new Ray(shotOrigin.position, shotDir.position), out hit))
+        // Направление пули прямо перед собой (вдоль оси Z)
+        Vector3 shootDirection = shotOrigin.forward;
+
+        // Застрелить прямо перед собой
+        if (Physics.Raycast(new Ray(transform.position, shootDirection), out hit))
         {
+            Debug.DrawRay(transform.position, shootDirection, Color.blue, 1f);
             Debug.Log($"{hit.collider.name} was hit");
+
+            // Если объект имеет компонент HPscript, нанести урон
+            if (hit.collider.gameObject.GetComponent<HPscript>())
+            {
+                hit.collider.gameObject.GetComponent<HPscript>().Damage(damage * (Random.Range(50, 150) / 100f));
+            }
         }
+
         currentAmmo--;
     }
+
 
     // Funkce pro zahájení dobíjení
     protected virtual void Recharge()
     {
         if (Recharging || currentAmmo == MaxAmmo) return; // Zastaví dobíjení, pokud je již plné nebo probíhá
-        Debug.Log("Recharge");
         Recharging = true;
         rechargeTime = 0f; // Reset časovače dobíjení
     }

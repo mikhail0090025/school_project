@@ -1,4 +1,4 @@
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.AI;
@@ -8,36 +8,51 @@ public class BotScript : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     [SerializeField] Animator MyAnimator;
-    Transform CurrentTarget;
-    [SerializeField] List<Transform> Targets;
+    public List<Transform> Targets;
     NavMeshAgent agent;
+    [SerializeField] Transform origin;
+    [SerializeField] Transform dir;
+    [SerializeField] float Damage;
+    [SerializeField] float ShootsPerSecond;
+    [SerializeField] Transform CurrentTarget;
+    public Color BotsColor;
+    float TimeSinceLastShot;
+    float TimeBetweenShots;
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         if (Targets.Count == 0) Debug.LogError("There are no targets in list");
         DefineTarget();
+        TimeBetweenShots = 1f / ShootsPerSecond;
     }
 
     // Update is called once per frame
     void Update()
     {
+        TimeSinceLastShot += Time.deltaTime;
+        if(CurrentTarget == null) DefineTarget();
         if(CurrentTarget != null)
         {
-            if(Vector3.Distance(CurrentTarget.position, transform.position) > 5f)
-            {
-                agent.SetDestination(CurrentTarget.position);
-                MyAnimator.SetBool("Walk", true);
-                MyAnimator.SetBool("Run", true);
-                MyAnimator.SetBool("Aim", false);
-            }
-            else
+            Debug.Log(gameObject.name + CanHitTarget().ToString());
+            if (CanHitTarget() && Vector3.Distance(CurrentTarget.position, transform.position) < 4f)
             {
                 agent.SetDestination(transform.position);
                 transform.LookAt(CurrentTarget.position);
                 MyAnimator.SetBool("Walk", false);
                 MyAnimator.SetBool("Run", false);
                 MyAnimator.SetBool("Aim", true);
-                MyAnimator.SetTrigger("Shot");
+                Shoot();
+            }
+            else
+            {
+                agent.SetDestination(CurrentTarget.position);
+                MyAnimator.SetBool("Walk", true);
+                MyAnimator.SetBool("Run", true);
+                MyAnimator.SetBool("Aim", false);
+                if (CanHitTarget() && Random.Range(0f, (3f / Time.deltaTime)) < 1f) {
+                    Shoot();
+                    Debug.Log("NIGGER");
+                }
             }
         }
     }
@@ -45,6 +60,13 @@ public class BotScript : MonoBehaviour
     {
         float minDist = 99999f;
         Transform current = transform;
+        Targets.RemoveAll(target => target == null);
+        if (Targets.Count == 0)
+        {
+            Debug.LogError("No valid targets in the list!");
+            CurrentTarget = null;
+            return;
+        }
         foreach (var target in Targets)
         {
             if(Vector3.Distance(target.position, transform.position) < minDist)
@@ -55,4 +77,50 @@ public class BotScript : MonoBehaviour
         }
         CurrentTarget = current;
     }
+
+    void Shoot()
+    {
+        if (TimeSinceLastShot > TimeBetweenShots) TimeSinceLastShot = 0;
+        else return;
+        MyAnimator.SetTrigger("Shot");
+
+        Vector3 direction = (CurrentTarget.position - origin.position).normalized;
+
+        float spreadAngle = 10f;
+        Quaternion spread = Quaternion.Euler(
+            Random.Range(-spreadAngle, spreadAngle),
+            Random.Range(-spreadAngle, spreadAngle),
+            0
+        );
+        direction = spread * direction;
+
+        Ray ray = new Ray(origin.position, direction);
+        Debug.DrawRay(origin.position, direction, BotsColor, 1);
+        RaycastHit hit;
+        if(Physics.Raycast(ray, out hit))
+        {
+            if (hit.collider.gameObject.GetComponent<HPscript>())
+            {
+                var scr = hit.collider.gameObject.GetComponent<HPscript>();
+                scr.Damage(this.Damage * (Random.Range(50, 150) / 100f));
+            }
+            else if(hit.collider.name == gameObject.name) Debug.Log("I hit myself");
+        }
+    }
+
+    bool CanHitTarget()
+    {
+        Vector3 direction = (CurrentTarget.position - origin.position).normalized;
+        RaycastHit hit;
+        if (Physics.Raycast(origin.position, direction, out hit))
+        {
+            if (hit.collider.gameObject != CurrentTarget.gameObject)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public void AddTarget(Transform new_target) => Targets.Add(new_target); 
 }

@@ -86,6 +86,13 @@
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
+            "fullManagedTypeName": "HPscript",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
             "fullManagedTypeName": "InventoryCell",
             "moduleName": "",
             "usedInScenes": []
@@ -580,6 +587,15 @@
         },
         {
             "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "FixedJoint",
+            "fullManagedTypeName": "UnityEngine.FixedJoint",
+            "moduleName": "Physics",
+            "usedInScenes": [
+                "Assets/Scenes/Game.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
             "nativeClass": "Font",
             "fullManagedTypeName": "UnityEngine.Font",
             "moduleName": "TextRendering",
@@ -602,6 +618,15 @@
                 "Assets/Scenes/NewGame.unity",
                 "Assets/Scenes/SceneLoader.unity",
                 "Assets/Scenes/Settings.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "Joint",
+            "fullManagedTypeName": "UnityEngine.Joint",
+            "moduleName": "Physics",
+            "usedInScenes": [
+                "Assets/Scenes/Game.unity"
             ]
         },
         {
@@ -807,6 +832,15 @@
             "managedAssemblyName": "UnityEngine.dll",
             "nativeClass": "SphereCollider",
             "fullManagedTypeName": "UnityEngine.SphereCollider",
+            "moduleName": "Physics",
+            "usedInScenes": [
+                "Assets/Scenes/Game.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "SpringJoint",
+            "fullManagedTypeName": "UnityEngine.SpringJoint",
             "moduleName": "Physics",
             "usedInScenes": [
                 "Assets/Scenes/Game.unity"

@@ -50,7 +50,6 @@ public class InventoryCell : MonoBehaviour
     // Odečte položku z buňky
     public void SubstractItem(int count)
     {
-        Debug.Log($"Subtraction was called! {count}");
         if (ID == -1 || this.count < count)            // Pokud je buňka prázdná nebo počet je menší než požadovaný
         {
             Debug.LogError("Subtraction is impossible");
@@ -58,7 +57,6 @@ public class InventoryCell : MonoBehaviour
         else
         {
             this.count -= count;                      // Odečte požadovaný počet položek
-            Debug.Log($"Subtraction result: {this.count}");
             if (this.count <= 0) this.ResetCell();    // Pokud je počet položek 0 nebo méně, resetuje buňku
         }
     }
