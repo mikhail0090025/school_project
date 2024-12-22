@@ -82,16 +82,13 @@ public class Gun : MonoBehaviour
         animator.SetTrigger("Shot");
         RaycastHit hit;
 
-        // Направление пули прямо перед собой (вдоль оси Z)
         Vector3 shootDirection = shotOrigin.forward;
 
-        // Застрелить прямо перед собой
-        if (Physics.Raycast(new Ray(transform.position, shootDirection), out hit))
+        if (Physics.Raycast(new Ray(shotOrigin.position, shootDirection), out hit))
         {
             Debug.DrawRay(transform.position, shootDirection, Color.blue, 1f);
             Debug.Log($"{hit.collider.name} was hit");
 
-            // Если объект имеет компонент HPscript, нанести урон
             if (hit.collider.gameObject.GetComponent<HPscript>())
             {
                 hit.collider.gameObject.GetComponent<HPscript>().Damage(damage * (Random.Range(50, 150) / 100f));

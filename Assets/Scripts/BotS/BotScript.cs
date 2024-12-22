@@ -1,5 +1,4 @@
-﻿using NUnit.Framework;
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.AI;
 using static UnityEngine.GraphicsBuffer;
@@ -34,7 +33,6 @@ public class BotScript : MonoBehaviour
         if(CurrentTarget == null) DefineTarget();
         if(CurrentTarget != null)
         {
-            Debug.Log(gameObject.name + CanHitTarget().ToString());
             if (CanHitTarget() && Vector3.Distance(CurrentTarget.position, transform.position) < 4f)
             {
                 agent.SetDestination(transform.position);
@@ -52,7 +50,6 @@ public class BotScript : MonoBehaviour
                 MyAnimator.SetBool("Aim", false);
                 if (CanHitTarget() && Random.Range(0f, (3f / Time.deltaTime)) < 1f) {
                     Shoot();
-                    Debug.Log("NIGGER");
                 }
             }
         }
@@ -64,7 +61,7 @@ public class BotScript : MonoBehaviour
         Targets.RemoveAll(target => target == null);
         if (Targets.Count == 0)
         {
-            Debug.LogError("No valid targets in the list!");
+            //Debug.LogError("No valid targets in the list!");
             CurrentTarget = null;
             return;
         }
