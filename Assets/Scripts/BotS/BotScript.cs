@@ -15,6 +15,7 @@ public class BotScript : MonoBehaviour
     [SerializeField] float Damage;
     [SerializeField] float ShootsPerSecond;
     [SerializeField] Transform CurrentTarget;
+    public float ShootSpread = 10f;
     public Color BotsColor;
     float TimeSinceLastShot;
     float TimeBetweenShots;
@@ -86,7 +87,7 @@ public class BotScript : MonoBehaviour
 
         Vector3 direction = (CurrentTarget.position - origin.position).normalized;
 
-        float spreadAngle = 10f;
+        float spreadAngle = ShootSpread;
         Quaternion spread = Quaternion.Euler(
             Random.Range(-spreadAngle, spreadAngle),
             Random.Range(-spreadAngle, spreadAngle),
@@ -124,3 +125,5 @@ public class BotScript : MonoBehaviour
 
     public void AddTarget(Transform new_target) => Targets.Add(new_target); 
 }
+
+public enum BotsDifficulty { Easy, Medium, Hard, VeryHard}

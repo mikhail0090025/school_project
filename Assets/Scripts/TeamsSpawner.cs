@@ -13,7 +13,7 @@ public class TeamsSpawner : MonoBehaviour
     {
         foreach (var team in Teams)
         {
-            for (global::System.Int32 i = 0; i < team.Size; i++)
+            for (int i = 0; i < team.Size; i++)
             {
                 var spawned = Instantiate(BotPrefabs[UnityEngine.Random.Range(0, BotPrefabs.Count)], team.Spawnpoint.position + new Vector3(0,0,i), Quaternion.identity);
                 var bot_script = spawned.GetComponent<BotScript>();
@@ -30,7 +30,23 @@ public class TeamsSpawner : MonoBehaviour
                 {
                     foreach (var bot2 in team2.Players)
                     {
-                        bot1.GetComponent<BotScript>().AddTarget(bot2.transform);
+                        var bs = bot1.GetComponent<BotScript>();
+                        bs.AddTarget(bot2.transform);
+                        switch (team1.botsDifficulty)
+                        {
+                            case BotsDifficulty.Easy:
+                                bs.ShootSpread = 20f;
+                                break;
+                            case BotsDifficulty.Medium:
+                                bs.ShootSpread = 15f;
+                                break;
+                            case BotsDifficulty.Hard:
+                                bs.ShootSpread = 9f;
+                                break;
+                            case BotsDifficulty.VeryHard:
+                                bs.ShootSpread = 3f;
+                                break;
+                        }
                     }
                     if(Teams.IndexOf(team1) != PlayersTeamIndex) bot1.GetComponent<BotScript>().AddTarget(Player);
                 }
@@ -51,4 +67,5 @@ public class Team
     public Color TeamColor;
     public Transform Spawnpoint;
     public int Size;
+    public BotsDifficulty botsDifficulty;
 }
