@@ -18,6 +18,7 @@ public class TeamsSpawner : MonoBehaviour
                 var spawned = Instantiate(BotPrefabs[UnityEngine.Random.Range(0, BotPrefabs.Count)], team.Spawnpoint.position + new Vector3((i / sqrt), 0,i % sqrt), Quaternion.identity);
                 var bot_script = spawned.GetComponent<BotScript>();
                 spawned.transform.Find("PlayerPoint").GetComponent<Renderer>().material.color = team.TeamColor;
+                spawned.transform.Find("Quad").GetComponent<Renderer>().material.color = team.TeamColor;
                 //MeshRenderer
                 bot_script.BotsColor = team.TeamColor;
                 team.Players.Add(spawned);
