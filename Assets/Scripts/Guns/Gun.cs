@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 [RequireComponent(typeof(RefreshAmmoUI))]
 public class Gun : MonoBehaviour
 {
@@ -12,6 +12,7 @@ public class Gun : MonoBehaviour
     [SerializeField] protected int MaxAmmo;
     [SerializeField] protected float damage;
     [SerializeField] protected GameObject bullet;
+    [SerializeField] protected bool playersGun;
     protected float rechargeTime;
     protected float shotPause;
     protected int currentAmmo;
@@ -22,6 +23,7 @@ public class Gun : MonoBehaviour
     protected bool Recharging;
     public bool IsRecharging => Recharging;
     public float RechargeTimeNeeded;
+    HPscript myHPS;
 
     // Inicializace nastavení zbraně při startu
     protected virtual void Start()
@@ -31,6 +33,7 @@ public class Gun : MonoBehaviour
         currentAmmo = MaxAmmo;
         m_RefreshAmmoUI = GetComponent<RefreshAmmoUI>();
         m_RefreshAmmoUI.RefreshUI(this);
+        myHPS = transform.parent.parent.parent.gameObject.GetComponent<HPscript>();
     }
 
     // Aktualizace se volá každý snímek
@@ -73,6 +76,10 @@ public class Gun : MonoBehaviour
 
         animator.SetBool("Center", Input.GetMouseButton(1));
         m_RefreshAmmoUI.RefreshUI(this);
+        if (playersGun)
+        {
+            GameObject.Find("KillsAndDeathsLabel").GetComponent<TMPro.TMP_Text>().text = $"Kills: {myHPS.Kills}\nDeaths: {myHPS.Deaths}";
+        }
     }
 
     // Funkce pro střelbu
@@ -88,10 +95,12 @@ public class Gun : MonoBehaviour
         {
             Debug.DrawRay(transform.position, shootDirection, Color.blue, 1f);
             Debug.Log($"{hit.collider.name} was hit");
+            var scr = hit.collider.gameObject.GetComponent<HPscript>();
 
-            if (hit.collider.gameObject.GetComponent<HPscript>())
+            if (scr)
             {
-                hit.collider.gameObject.GetComponent<HPscript>().Damage(damage * (Random.Range(50, 150) / 100f));
+                scr.Damage(damage * (Random.Range(50, 150) / 100f));
+                if(scr.GetCurrentHP <= 0f) myHPS.NewKill();
             }
         }
 

@@ -1578,6 +1578,7 @@ MonoBehaviour:
     botsDifficulty: 0
   PlayersTeamIndex: 0
   Player: {fileID: 1110092660}
+  FromGameSettings: 1
 --- !u!4 &983299106
 Transform:
   m_ObjectHideFlags: 0
@@ -3086,25 +3087,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 574115950188950561, guid: 5562f3602c731714baa48ed95f10bbf6, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2098379666765773861, guid: 5562f3602c731714baa48ed95f10bbf6, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3121278364645165424, guid: 5562f3602c731714baa48ed95f10bbf6, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3.22
-      objectReference: {fileID: 0}
-    - target: {fileID: 3121278364645165424, guid: 5562f3602c731714baa48ed95f10bbf6, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -3.87
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279806936158263952, guid: 5562f3602c731714baa48ed95f10bbf6, type: 3}
-      propertyPath: m_IsActive
-      value: 0
+    - target: {fileID: 1880618010155368125, guid: 5562f3602c731714baa48ed95f10bbf6, type: 3}
+      propertyPath: m_text
+      value: 'Kills: 0
+
+        Deaths: 0'
       objectReference: {fileID: 0}
     - target: {fileID: 4494826748694681832, guid: 5562f3602c731714baa48ed95f10bbf6, type: 3}
       propertyPath: m_Name
@@ -3148,10 +3135,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6213148955778217132, guid: 5562f3602c731714baa48ed95f10bbf6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6473397978326378752, guid: 5562f3602c731714baa48ed95f10bbf6, type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

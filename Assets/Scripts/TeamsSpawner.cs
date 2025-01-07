@@ -8,8 +8,17 @@ public class TeamsSpawner : MonoBehaviour
     [SerializeField] List<Team> Teams;
     [SerializeField] int PlayersTeamIndex;
     [SerializeField] Transform Player;
+    [SerializeField] bool FromGameSettings;
     void Start()
     {
+        if (FromGameSettings)
+        {
+            if (Teams.Count != 2) Debug.Log("If you get team data from new game settings, you can have only 2 teams (no more nor less)");
+            Teams[0].Size = NewGameSettings.Team1Size;
+            Teams[1].Size = NewGameSettings.Team2Size;
+            Teams[0].botsDifficulty = (BotsDifficulty)NewGameSettings.BotsDifficulty;
+            Teams[1].botsDifficulty = (BotsDifficulty)NewGameSettings.BotsDifficulty;
+        }
         foreach (var team in Teams)
         {
             int sqrt = Mathf.RoundToInt(Mathf.Sqrt(team.Size));

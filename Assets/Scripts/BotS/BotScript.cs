@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.AI;
 using static UnityEngine.GraphicsBuffer;
-
+[RequireComponent(typeof(HPscript))]
 public class BotScript : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -18,12 +18,14 @@ public class BotScript : MonoBehaviour
     public Color BotsColor;
     float TimeSinceLastShot;
     float TimeBetweenShots;
+    HPscript myHPS;
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         if (Targets.Count == 0) Debug.LogError("There are no targets in list");
         DefineTarget();
         TimeBetweenShots = 1f / ShootsPerSecond;
+        myHPS = GetComponent<HPscript>();
     }
 
     // Update is called once per frame
@@ -101,6 +103,7 @@ public class BotScript : MonoBehaviour
             {
                 var scr = hit.collider.gameObject.GetComponent<HPscript>();
                 scr.Damage(this.Damage * (Random.Range(50, 150) / 100f));
+                if (scr.GetCurrentHP <= 0f) myHPS.NewKill();
             }
             else if(hit.collider.name == gameObject.name) Debug.Log("I hit myself");
         }

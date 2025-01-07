@@ -13,6 +13,7 @@ public class DropdownOptionsListDrawer : WrapperWindowFixture
     }
 
     [UnityTest]
+    [Ignore("UUM-35053")]
     public IEnumerator PropertyDrawerDoesNotThrowExceptionWhenObjectIsDisposed()
     {
         var go = new GameObject();

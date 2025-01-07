@@ -8,12 +8,14 @@ public class NewGameSettings : MonoBehaviour
     [SerializeField] TMP_Dropdown MapDropdown;
     [SerializeField] Slider Team1SizeSlider;
     [SerializeField] Slider Team2SizeSlider;
+    [SerializeField] TMP_Dropdown BotsDifficultyDropdown;
     [SerializeField] TMP_Text Team1SizeLabel;
     [SerializeField] TMP_Text Team2SizeLabel;
     [SerializeField] Button StartButton;
     public static int MapID;
     public static int Team1Size;
     public static int Team2Size;
+    public static int BotsDifficulty;
     public List<MapEntry> indexToMapName;
 
     void Start()
@@ -31,6 +33,7 @@ public class NewGameSettings : MonoBehaviour
             MapID = MapDropdown.value;
             Team1Size = (int)Team1SizeSlider.value;
             Team2Size = (int)Team2SizeSlider.value;
+            BotsDifficulty = (int)BotsDifficultyDropdown.value;
             LoadScene.LoadSceneGlobally(indexToMapName.Find(x => x.index == MapID).mapName);
         });
     }

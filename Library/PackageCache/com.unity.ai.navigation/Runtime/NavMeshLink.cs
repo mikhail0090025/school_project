@@ -64,10 +64,6 @@ namespace Unity.AI.Navigation
         [SerializeField]
         int m_Area;
 
-#if UNITY_EDITOR
-        int m_LastArea;
-#endif
-        
         /// <summary> Gets or sets the type of agent that can use the link. </summary>
         public int agentTypeID
         {
@@ -287,13 +283,7 @@ namespace Unity.AI.Navigation
         }
 
         // ensures serialized version is up-to-date at run-time, in case it was not updated in the Editor
-        void Awake()
-        {
-            UpgradeSerializedVersion();
-#if UNITY_EDITOR
-            m_LastArea = m_Area;
-#endif
-        }
+        void Awake() => UpgradeSerializedVersion();
 
         void OnEnable()
         {
@@ -402,9 +392,7 @@ namespace Unity.AI.Navigation
 
             m_LastPosition = transform.position;
             m_LastRotation = transform.rotation;
-#if UNITY_EDITOR
-            m_LastArea = m_Area;
-#endif
+
             RecordEndpointTransforms();
 
             GetWorldPositions(out m_LastStartWorldPosition, out m_LastEndWorldPosition);
@@ -465,7 +453,7 @@ namespace Unity.AI.Navigation
 
             m_Width = Mathf.Max(0.0f, m_Width);
 
-            if (!NavMesh.IsLinkValid(m_LinkInstance) && (m_LastArea != 1 || m_Area == 1))
+            if (!NavMesh.IsLinkValid(m_LinkInstance))
                 return;
 
             UpdateLink();
@@ -478,9 +466,8 @@ namespace Unity.AI.Navigation
             {
                 AddTracking(this);
             }
-            
-            m_LastArea = m_Area;
         }
+
         void Reset()
         {
             UpgradeSerializedVersion();
