@@ -12,6 +12,7 @@ ScriptsOnlyBuild:
     - InventoryCell
     - ItemsData
     - LoadScene
+    - MapPoints
     - MouseRotate
     - NewGameSettings
     - Pistol
@@ -287,6 +288,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 30756}
     - Class: 114
       Script: {instanceID: 31770}
+    - Class: 114
+      Script: {instanceID: 41568}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -426,6 +429,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 30756}
     - Class: 114
       Script: {instanceID: 31770}
+    - Class: 114
+      Script: {instanceID: 41568}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -2344,6 +2349,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp-firstpass
     namespaceName: UnityStandardAssets.CrossPlatformInput
     className: MobileControlRig
+  - hash:
+      serializedVersion: 2
+      Hash: 104bf5d803be90b496e21dabe94317d8
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: MapPoints
   platform: 19
   scenePathNames:
   - Assets/Scenes/MainMenu.unity

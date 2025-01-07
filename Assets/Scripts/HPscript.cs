@@ -4,6 +4,7 @@ public class HPscript : MonoBehaviour
 {
     [SerializeField] protected float MaxHP;
     [SerializeField] protected float CurrentHP;
+    [SerializeField] public float PercentHP => CurrentHP / (float)MaxHP;
     public float GetCurrentHP => CurrentHP;
     [SerializeField] GameObject DeadBody;
     [SerializeField] int kills;

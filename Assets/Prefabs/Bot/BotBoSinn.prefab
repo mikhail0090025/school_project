@@ -151,7 +151,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -3468112505990731342, guid: 3b92f22049a1a4c4191fe4e9a9bdf959, type: 3}
+  - {fileID: 2100000, guid: 5d0eb3ad32fa84142bf75f83978957bf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1500,7 +1500,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.3
-  m_Speed: 2
+  m_Speed: 4
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 360
@@ -1570,6 +1570,8 @@ MonoBehaviour:
   MaxHP: 200
   CurrentHP: 0
   DeadBody: {fileID: 7115418647671882353, guid: f8d1635af39a5a1469ab8045b5984f2d, type: 3}
+  kills: 0
+  deaths: 0
 --- !u!1 &6381820144801476746
 GameObject:
   m_ObjectHideFlags: 0
