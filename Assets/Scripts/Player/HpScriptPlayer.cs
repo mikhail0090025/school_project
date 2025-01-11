@@ -3,13 +3,13 @@ using UnityEngine.UI;
 using TMPro;
 public class HpScriptPlayer : HPscript
 {
-    [SerializeField] GameObject DeathWindow;
+    [SerializeField] int DeathWindowIndex;
     [SerializeField] Image PlayerHP;
     [SerializeField] TMPro.TMP_Text TextHp;
     protected override void Start()
     {
         base.Start();
-        DeathWindow.SetActive(false);
+        FindObjectOfType<WindowsManager>().windows[DeathWindowIndex].TurnOff();
         UpdateUI();
     }
 
@@ -27,6 +27,6 @@ public class HpScriptPlayer : HPscript
     }
     public override void Dead()
     {
-        DeathWindow.SetActive(true);
+        FindObjectOfType<WindowsManager>().windows[DeathWindowIndex].TurnOn();
     }
 }

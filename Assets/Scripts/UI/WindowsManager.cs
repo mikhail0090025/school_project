@@ -54,21 +54,60 @@ public class Window
     [SerializeField] KeyCode Key; // Klávesa pro ovládání okna
 
     // Zapni okno
-    public void TurnOn() => Window_.SetActive(true);
+    public void TurnOn()
+    {
+        if (Window_.GetComponent<Animator>())
+        {
+            var anim = Window_.GetComponent<Animator>();
+            anim.SetBool("Opened", true);
+        }
+        else
+        {
+            Window_.SetActive(true);
+        }
+    }
 
     // Vypni okno
-    public void TurnOff() => Window_.SetActive(false);
+    public void TurnOff()
+    {
+        if (Window_.GetComponent<Animator>())
+        {
+            var anim = Window_.GetComponent<Animator>();
+            anim.SetBool("Opened", false);
+        }
+        else
+        {
+            Window_.SetActive(false);
+        }
+    }
 
     // Přepni stav okna (otevřeno/uzavřeno)
     public void Switch()
     {
-        Window_.SetActive(!Window_.activeSelf);
+        if (IsOpened)
+        {
+            TurnOff();
+        }
+        else
+        {
+            TurnOn();
+        }
     }
 
     // Vlastnost pro kontrolu, zda je okno otevřené
     public bool IsOpened
     {
-        get { return Window_.activeSelf; } // Vrátí true, pokud je okno aktivní
+        get {
+            if (Window_.GetComponent<Animator>())
+            {
+                var anim = Window_.GetComponent<Animator>();
+                return anim.GetBool("Opened");
+            }
+            else
+            {
+                return Window_.activeSelf;
+            }
+        } // Vrátí true, pokud je okno aktivní
     }
 
     // Vlastnost pro přístup k přiřazené klávese

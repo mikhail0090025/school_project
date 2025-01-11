@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 [RequireComponent(typeof(MapPoints))]
 public class TeamsSpawner : MonoBehaviour
 {
@@ -10,9 +10,11 @@ public class TeamsSpawner : MonoBehaviour
     [SerializeField] int PlayersTeamIndex;
     [SerializeField] Transform Player;
     [SerializeField] bool FromGameSettings;
+    TMPro.TMP_Text TeamsLabel;
     MapPoints mp;
     void Start()
     {
+        TeamsLabel = GameObject.Find("TeamsLabel").GetComponent<TMPro.TMP_Text>();
         if (Application.isEditor)
         {
             FromGameSettings = false;
@@ -76,7 +78,12 @@ public class TeamsSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        TeamsLabel.text = "";
+        foreach (var item in Teams)
+        {
+            int teamIndex = Teams.IndexOf(item);
+            TeamsLabel.text += $"Team {teamIndex + 1}: {item.CurrentSize}/{item.Size} {item.botsDifficulty} {(PlayersTeamIndex == teamIndex ? "(Your team)" : "")}\n";
+        }
     }
 }
 [Serializable]
@@ -87,4 +94,13 @@ public class Team
     public Transform Spawnpoint;
     public int Size;
     public BotsDifficulty botsDifficulty;
+    public int CurrentSize { get
+        {
+            int count = 0;
+            foreach (var player in Players)
+            {
+                if (player != null) count++;
+            }
+            return count;
+        } }
 }
