@@ -41,34 +41,35 @@ public class BotScript : MonoBehaviour
                 transform.LookAt(CurrentTarget.position);
                 MyAnimator.SetBool("Walk", false);
                 MyAnimator.SetBool("Run", false);
-                MyAnimator.SetBool("Aim", true);
+                MyAnimator.SetBool("Crouch", true);
                 Shoot();
             }
-            else if (Vector3.Distance(CurrentTarget.position, transform.position) < 20f)
+            else
+            //if (Vector3.Distance(CurrentTarget.position, transform.position) < 20f)
             {
                 agent.SetDestination(CurrentTarget.position);
                 MyAnimator.SetBool("Walk", true);
                 MyAnimator.SetBool("Run", true);
-                MyAnimator.SetBool("Aim", false);
+                MyAnimator.SetBool("Crouch", false);
                 if (CanHitTarget() && Random.Range(0f, (3f / Time.deltaTime)) < 1f)
                 {
                     Shoot();
                 }
-            }
+            }/*
             else
             {
-                if (agent.destination == null || Vector3.Distance(agent.destination, transform.position) < 3f) {
+                if (agent.destination == null || Vector3.Distance(agent.destination, transform.position) < 1f) {
                     var points = FindObjectOfType<MapPoints>().Points_;
                     agent.SetDestination(points[Random.Range(0, points.Count)].transform.position);
                 }
                 MyAnimator.SetBool("Walk", true);
                 MyAnimator.SetBool("Run", true);
-                MyAnimator.SetBool("Aim", false);
+                MyAnimator.SetBool("Crouch", false);
                 if (CanHitTarget() && Random.Range(0f, (3f / Time.deltaTime)) < 1f)
                 {
                     Shoot();
                 }
-            }
+            }*/
         }
         var clr = transform.Find("PlayerPoint").gameObject.GetComponent<Renderer>().material.color;
         transform.Find("PlayerPoint").gameObject.GetComponent<Renderer>().material.color = new Color(clr.r, clr.g, clr.b, myHPS.PercentHP * 255f);
