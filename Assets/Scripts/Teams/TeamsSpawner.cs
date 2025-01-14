@@ -17,7 +17,7 @@ public class TeamsSpawner : MonoBehaviour
         TeamsLabel = GameObject.Find("TeamsLabel").GetComponent<TMPro.TMP_Text>();
         if (Application.isEditor)
         {
-            FromGameSettings = false;
+            //FromGameSettings = false;
         }
         mp = GetComponent<MapPoints>();
         if (FromGameSettings)

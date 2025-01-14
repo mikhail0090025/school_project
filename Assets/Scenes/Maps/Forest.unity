@@ -1950,7 +1950,7 @@ MonoBehaviour:
     Size: 30
     botsDifficulty: 0
   PlayersTeamIndex: 0
-  Player: {fileID: 1110092660}
+  Player: {fileID: 1399638711748894812}
   FromGameSettings: 1
 --- !u!4 &983299106
 Transform:
@@ -2178,11 +2178,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7777379178379492520, guid: 86f1f4778995b1c4bab4ccf415c321c1, type: 3}
   m_PrefabInstance: {fileID: 1060707462}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1110092660 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3121278364645165424, guid: 5562f3602c731714baa48ed95f10bbf6, type: 3}
-  m_PrefabInstance: {fileID: 4052538023917922604}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1116229559
 PrefabInstance:
@@ -3828,7 +3823,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec05603251e4e5e4eb32b64c5ff9ee5c, type: 3}
---- !u!1001 &4052538023917922604
+--- !u!4 &1399638711748894812 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3121278364645165424, guid: 5562f3602c731714baa48ed95f10bbf6, type: 3}
+  m_PrefabInstance: {fileID: 2659176751642099822}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2659176751642099822
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -3836,22 +3836,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 935376266585756634, guid: 5562f3602c731714baa48ed95f10bbf6, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 1200
-      objectReference: {fileID: 0}
-    - target: {fileID: 3542489474074723476, guid: 5562f3602c731714baa48ed95f10bbf6, type: 3}
-      propertyPath: m_fontSize
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 3542489474074723476, guid: 5562f3602c731714baa48ed95f10bbf6, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 3542489474074723476, guid: 5562f3602c731714baa48ed95f10bbf6, type: 3}
-      propertyPath: m_enableAutoSizing
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4494826748694681832, guid: 5562f3602c731714baa48ed95f10bbf6, type: 3}
       propertyPath: m_Name
       value: Main
@@ -3895,10 +3879,6 @@ PrefabInstance:
     - target: {fileID: 6213148955778217132, guid: 5562f3602c731714baa48ed95f10bbf6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6750229657357895930, guid: 5562f3602c731714baa48ed95f10bbf6, type: 3}
-      propertyPath: DeathWindowIndex
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3990,6 +3970,6 @@ SceneRoots:
   - {fileID: 674742603}
   - {fileID: 1226500330}
   - {fileID: 983299106}
-  - {fileID: 4052538023917922604}
+  - {fileID: 2659176751642099822}
   - {fileID: 8180418092354355504}
   - {fileID: 1391059065}
