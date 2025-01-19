@@ -13,6 +13,7 @@ public class Gun : MonoBehaviour
     [SerializeField] protected float damage;
     [SerializeField] protected GameObject bullet;
     [SerializeField] protected bool playersGun;
+    [SerializeField] protected GameObject Player;
     protected float rechargeTime;
     protected float shotPause;
     protected int currentAmmo;
@@ -100,7 +101,8 @@ public class Gun : MonoBehaviour
             if (scr)
             {
                 scr.Damage(damage * (Random.Range(50, 150) / 100f));
-                if(scr.GetCurrentHP <= 0f) myHPS.NewKill();
+                var teamsScr = FindObjectOfType<TeamsSpawner>();
+                if(scr.GetCurrentHP <= 0f && teamsScr.SameTeam(scr.gameObject, Player)) myHPS.NewKill();
             }
         }
 

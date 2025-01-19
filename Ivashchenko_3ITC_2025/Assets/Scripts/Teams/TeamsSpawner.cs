@@ -85,6 +85,14 @@ public class TeamsSpawner : MonoBehaviour
             TeamsLabel.text += $"Team {teamIndex + 1}: {item.CurrentSize}/{item.Size} {item.botsDifficulty} {(PlayersTeamIndex == teamIndex ? "(Your team)" : "")}\n";
         }
     }
+    public bool SameTeam(GameObject player1,  GameObject player2)
+    {
+        foreach (var team in Teams)
+        {
+            if (team.Players.Contains(player1) && team.Players.Contains(player2)) return true;
+        }
+        return false;
+    }
 }
 [Serializable]
 public class Team

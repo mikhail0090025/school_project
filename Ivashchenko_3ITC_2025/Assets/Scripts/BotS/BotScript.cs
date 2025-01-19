@@ -39,18 +39,14 @@ public class BotScript : MonoBehaviour
             {
                 agent.SetDestination(transform.position);
                 transform.LookAt(CurrentTarget.position);
-                MyAnimator.SetBool("Walk", false);
-                MyAnimator.SetBool("Run", false);
-                MyAnimator.SetBool("Crouch", true);
+                SetAnimation(false, false, true);
                 Shoot();
             }
             else
             //if (Vector3.Distance(CurrentTarget.position, transform.position) < 20f)
             {
                 agent.SetDestination(CurrentTarget.position);
-                MyAnimator.SetBool("Walk", true);
-                MyAnimator.SetBool("Run", true);
-                MyAnimator.SetBool("Crouch", false);
+                SetAnimation(true, true, false);
                 if (CanHitTarget() && Random.Range(0f, (3f / Time.deltaTime)) < 1f)
                 {
                     Shoot();
@@ -62,9 +58,7 @@ public class BotScript : MonoBehaviour
                     var points = FindObjectOfType<MapPoints>().Points_;
                     agent.SetDestination(points[Random.Range(0, points.Count)].transform.position);
                 }
-                MyAnimator.SetBool("Walk", true);
-                MyAnimator.SetBool("Run", true);
-                MyAnimator.SetBool("Crouch", false);
+                SetAnimation(true, true, false);
                 if (CanHitTarget() && Random.Range(0f, (3f / Time.deltaTime)) < 1f)
                 {
                     Shoot();
@@ -73,6 +67,12 @@ public class BotScript : MonoBehaviour
         }
         var clr = transform.Find("PlayerPoint").gameObject.GetComponent<Renderer>().material.color;
         transform.Find("PlayerPoint").gameObject.GetComponent<Renderer>().material.color = new Color(clr.r, clr.g, clr.b, myHPS.PercentHP * 255f);
+    }
+    void SetAnimation(bool walk, bool run, bool crouch)
+    {
+        MyAnimator.SetBool("Walk", walk);
+        MyAnimator.SetBool("Run", run);
+        MyAnimator.SetBool("Crouch", crouch);
     }
     void DefineTarget()
     {
