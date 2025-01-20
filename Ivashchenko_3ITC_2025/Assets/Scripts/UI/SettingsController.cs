@@ -11,7 +11,6 @@ public class SettingsController : MonoBehaviour
     // UI
     [SerializeField] TMP_Dropdown ResolutionDropdown;
     [SerializeField] Toggle FullscreenToggle;
-    // Start is called before the first frame update
     void Start()
     {
         ResolutionDropdown.value = currentResolution;
@@ -28,11 +27,6 @@ public class SettingsController : MonoBehaviour
         });
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     void SetSettings()
     {
         currentResolution = ResolutionDropdown.value;
