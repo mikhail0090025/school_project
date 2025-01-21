@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using static UnityEditor.Experimental.GraphView.GraphView;
 [RequireComponent(typeof(MapPoints))]
 public class TeamsSpawner : MonoBehaviour
 {
@@ -92,6 +93,14 @@ public class TeamsSpawner : MonoBehaviour
             if (team.Players.Contains(player1) && team.Players.Contains(player2)) return true;
         }
         return false;
+    }
+
+    public void DeletePlayer(GameObject player)
+    {
+        foreach (var team in Teams)
+        {
+            team.Players.Remove(player);
+        }
     }
 }
 [Serializable]

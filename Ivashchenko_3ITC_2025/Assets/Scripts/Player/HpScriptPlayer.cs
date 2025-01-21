@@ -28,5 +28,6 @@ public class HpScriptPlayer : HPscript
     public override void Dead()
     {
         FindObjectOfType<WindowsManager>().windows[DeathWindowIndex].TurnOn();
+        FindObjectOfType<TeamsSpawner>().DeletePlayer(gameObject);
     }
 }
