@@ -14,6 +14,7 @@ public class Gun : MonoBehaviour
     [SerializeField] protected GameObject bullet;
     [SerializeField] protected bool playersGun;
     [SerializeField] protected GameObject Player;
+    ScoreCounter scoreCounter;
     protected float rechargeTime;
     protected float shotPause;
     protected int currentAmmo;
@@ -35,6 +36,7 @@ public class Gun : MonoBehaviour
         m_RefreshAmmoUI = GetComponent<RefreshAmmoUI>();
         m_RefreshAmmoUI.RefreshUI(this);
         myHPS = transform.parent.parent.parent.gameObject.GetComponent<HPscript>();
+        scoreCounter = Player.GetComponent<ScoreCounter>();
     }
 
     // Aktualizace se volá každý snímek
@@ -79,7 +81,7 @@ public class Gun : MonoBehaviour
         m_RefreshAmmoUI.RefreshUI(this);
         if (playersGun)
         {
-            GameObject.Find("KillsAndDeathsLabel").GetComponent<TMPro.TMP_Text>().text = $"Kills: {myHPS.Kills}\nDeaths: {myHPS.Deaths}";
+            GameObject.Find("KillsAndDeathsLabel").GetComponent<TMPro.TMP_Text>().text = $"Kills: {scoreCounter.Kills}\nFriend kills: {scoreCounter.FriendKills}\nDeaths: {scoreCounter.Deaths}\nScore: {scoreCounter.Score()}";
         }
     }
 
@@ -95,14 +97,21 @@ public class Gun : MonoBehaviour
         if (Physics.Raycast(new Ray(shotOrigin.position, shootDirection), out hit))
         {
             Debug.DrawRay(transform.position, shootDirection, Color.blue, 1f);
-            Debug.Log($"{hit.collider.name} was hit");
             var scr = hit.collider.gameObject.GetComponent<HPscript>();
 
             if (scr)
             {
                 scr.Damage(damage * (Random.Range(50, 150) / 100f));
                 var teamsScr = FindObjectOfType<TeamsSpawner>();
-                if(scr.GetCurrentHP <= 0f && teamsScr.SameTeam(scr.gameObject, Player)) myHPS.NewKill();
+                if (scr.GetCurrentHP <= 0f && teamsScr.SameTeam(scr.gameObject, Player))
+                {
+                    scoreCounter.NewFriendKill();
+                    MessageShow.Show("DONT KILL TEAMMATES!", 5f);
+                }
+                else if (scr.GetCurrentHP <= 0f && !teamsScr.SameTeam(scr.gameObject, Player))
+                {
+                    scoreCounter.NewKill();
+                }
             }
         }
 

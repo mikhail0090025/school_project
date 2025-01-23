@@ -7,19 +7,14 @@ public class HPscript : MonoBehaviour
     [SerializeField] public float PercentHP => CurrentHP / (float)MaxHP;
     public float GetCurrentHP => CurrentHP;
     [SerializeField] GameObject DeadBody;
-    [SerializeField] int kills;
-    [SerializeField] int deaths;
-    public int Kills => kills;
-    public int Deaths => deaths;
+    ScoreCounter scoreCounter;
 
 
     protected virtual void Start()
     {
         CurrentHP = MaxHP;
-        kills = 0;
-        deaths = 0;
+        scoreCounter = GetComponent<ScoreCounter>();
     }
-    public void NewKill() => kills++;
 
     protected virtual void Update()
     {
@@ -34,7 +29,7 @@ public class HPscript : MonoBehaviour
     }
     public virtual void Dead()
     {
-        deaths++;
+        scoreCounter.NewDeath();
         foreach (var item in FindObjectsOfType<BotScript>())
         {
             item.Targets.RemoveAll(target => target == transform);

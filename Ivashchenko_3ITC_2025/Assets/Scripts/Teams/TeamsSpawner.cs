@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using static UnityEditor.Experimental.GraphView.GraphView;
+//using static UnityEditor.Experimental.GraphView.GraphView;
 [RequireComponent(typeof(MapPoints))]
 public class TeamsSpawner : MonoBehaviour
 {
@@ -41,7 +41,9 @@ public class TeamsSpawner : MonoBehaviour
                 //MeshRenderer
                 bot_script.BotsColor = team.TeamColor;
                 team.Players.Add(spawned);
+                spawned.name = "BotTeam" + (Teams.IndexOf(team) + 1).ToString();
             }
+            if (Teams.IndexOf(team) == PlayersTeamIndex) team.Players.Add(Player.gameObject);
         }
         foreach (var team1 in Teams)
         {
@@ -53,24 +55,27 @@ public class TeamsSpawner : MonoBehaviour
                     foreach (var bot2 in team2.Players)
                     {
                         var bs = bot1.GetComponent<BotScript>();
-                        bs.AddTarget(bot2.transform);
-                        switch (team1.botsDifficulty)
+                        if(bs)
                         {
-                            case BotsDifficulty.Easy:
-                                bs.ShootSpread = 20f;
-                                break;
-                            case BotsDifficulty.Medium:
-                                bs.ShootSpread = 15f;
-                                break;
-                            case BotsDifficulty.Hard:
-                                bs.ShootSpread = 9f;
-                                break;
-                            case BotsDifficulty.VeryHard:
-                                bs.ShootSpread = 3f;
-                                break;
+                            bs.AddTarget(bot2.transform);
+                            switch (team1.botsDifficulty)
+                            {
+                                case BotsDifficulty.Easy:
+                                    bs.ShootSpread = 20f;
+                                    break;
+                                case BotsDifficulty.Medium:
+                                    bs.ShootSpread = 15f;
+                                    break;
+                                case BotsDifficulty.Hard:
+                                    bs.ShootSpread = 9f;
+                                    break;
+                                case BotsDifficulty.VeryHard:
+                                    bs.ShootSpread = 3f;
+                                    break;
+                            }
                         }
                     }
-                    if(Teams.IndexOf(team1) != PlayersTeamIndex) bot1.GetComponent<BotScript>().AddTarget(Player);
+                    //if(Teams.IndexOf(team1) != PlayersTeamIndex) bot1.GetComponent<BotScript>().AddTarget(Player);
                 }
             }
         }
@@ -88,6 +93,8 @@ public class TeamsSpawner : MonoBehaviour
     }
     public bool SameTeam(GameObject player1,  GameObject player2)
     {
+        Debug.Log("Name 1: " + player1.name);
+        Debug.Log("Name 2: " + player2.name);
         foreach (var team in Teams)
         {
             if (team.Players.Contains(player1) && team.Players.Contains(player2)) return true;
