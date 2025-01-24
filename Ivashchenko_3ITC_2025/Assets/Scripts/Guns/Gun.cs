@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 [RequireComponent(typeof(RefreshAmmoUI))]
+[RequireComponent(typeof(AudioSource))]
 public class Gun : MonoBehaviour
 {
     [SerializeField] protected Animator animator;
@@ -19,6 +20,7 @@ public class Gun : MonoBehaviour
     protected float shotPause;
     protected int currentAmmo;
     protected float timeSinceLastShot;
+    protected AudioSource audioSource;
     RefreshAmmoUI m_RefreshAmmoUI;
     public int CurrentAmmo => currentAmmo;
     public int Max_Ammo => MaxAmmo;
@@ -37,6 +39,7 @@ public class Gun : MonoBehaviour
         m_RefreshAmmoUI.RefreshUI(this);
         myHPS = transform.parent.parent.parent.gameObject.GetComponent<HPscript>();
         scoreCounter = Player.GetComponent<ScoreCounter>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Aktualizace se volá každý snímek
@@ -91,6 +94,7 @@ public class Gun : MonoBehaviour
         timeSinceLastShot = 0;
         animator.SetTrigger("Shot");
         RaycastHit hit;
+        audioSource.Play();
 
         Vector3 shootDirection = shotOrigin.forward;
 

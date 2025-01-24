@@ -4,6 +4,7 @@ using UnityEngine.AI;
 using static UnityEngine.GraphicsBuffer;
 [RequireComponent(typeof(HPscript))]
 [RequireComponent(typeof(ScoreCounter))]
+[RequireComponent(typeof(AudioSource))]
 public class BotScript : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -15,6 +16,7 @@ public class BotScript : MonoBehaviour
     [SerializeField] float Damage;
     [SerializeField] float ShootsPerSecond;
     [SerializeField] Transform CurrentTarget;
+    private AudioSource audioSource;
     public float ShootSpread = 10f;
     public Color BotsColor;
     float TimeSinceLastShot;
@@ -29,6 +31,7 @@ public class BotScript : MonoBehaviour
         TimeBetweenShots = 1f / ShootsPerSecond;
         myHPS = GetComponent<HPscript>();
         myScoreCounter = GetComponent<ScoreCounter>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -104,6 +107,7 @@ public class BotScript : MonoBehaviour
         if (TimeSinceLastShot > TimeBetweenShots) TimeSinceLastShot = 0;
         else return;
         MyAnimator.SetTrigger("Shot");
+        audioSource.Play();
 
         Vector3 direction = (CurrentTarget.position - origin.position).normalized;
 
