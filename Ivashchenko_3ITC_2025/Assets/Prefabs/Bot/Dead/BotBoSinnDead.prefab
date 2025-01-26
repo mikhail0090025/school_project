@@ -1212,6 +1212,7 @@ GameObject:
   - component: {fileID: 4938355833207520605}
   - component: {fileID: 5489005493643988121}
   - component: {fileID: 7339251986379170134}
+  - component: {fileID: 4463656153137200249}
   m_Layer: 0
   m_Name: BotBoSinnDead
   m_TagString: Untagged
@@ -1300,6 +1301,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   seconds: 8
+--- !u!114 &4463656153137200249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7115418647671882353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d82af41a87f71514781b0a0975672d34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bodyParts:
+  - {fileID: 7683346197831957301}
+  - {fileID: 4809986568691274709}
+  - {fileID: 3918274853653496052}
+  - {fileID: 7607588204117556460}
+  - {fileID: 2397491493805846979}
+  - {fileID: 7217180286882108133}
+  - {fileID: 6839807219469032537}
+  - {fileID: 350132503674798279}
+  - {fileID: 3788643042758177106}
 --- !u!1 &7616239753906812588
 GameObject:
   m_ObjectHideFlags: 0

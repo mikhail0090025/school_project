@@ -34,7 +34,12 @@ public class HPscript : MonoBehaviour
         {
             item.Targets.RemoveAll(target => target == transform);
         }
-        Instantiate(DeadBody, transform.position, transform.rotation);
+        var deadbody = Instantiate(DeadBody, transform.position, transform.rotation);
+        var sbc = GetComponent<SetBodyColor>();
+        if (sbc)
+        {
+            deadbody.GetComponent<DeadbodyScript>()?.PaintMe(sbc.BotsColor);
+        }
         Destroy(gameObject);
     }
 }

@@ -1112,11 +1112,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 6138218303867240370}
-  shootRate: 0.5
+  shootRate: 0.8
   shotOrigin: {fileID: 6926981663628463619}
   shotDir: {fileID: 4485197302696938548}
   MaxAmmo: 8
-  damage: 120
+  damage: 160
   bullet: {fileID: 3390861097826841908, guid: 0c8688a97e2a66e49b091e5932f9239d, type: 3}
   playersGun: 1
   Player: {fileID: 5030254956186343410}
@@ -3307,10 +3307,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 6627701434317804760}
-  shootRate: 1
+  shootRate: 2
   shotOrigin: {fileID: 6926981663628463619}
   shotDir: {fileID: 4485197302696938548}
-  MaxAmmo: 15
+  MaxAmmo: 10
   damage: 50
   bullet: {fileID: 3390861097826841908, guid: 0c8688a97e2a66e49b091e5932f9239d, type: 3}
   playersGun: 1
@@ -5229,7 +5229,7 @@ MonoBehaviour:
   shotOrigin: {fileID: 6926981663628463619}
   shotDir: {fileID: 4485197302696938548}
   MaxAmmo: 35
-  damage: 30
+  damage: 40
   bullet: {fileID: 3390861097826841908, guid: 0c8688a97e2a66e49b091e5932f9239d, type: 3}
   playersGun: 1
   Player: {fileID: 5030254956186343410}
@@ -7271,8 +7271,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5030254956186343410}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.22, y: 0.5, z: -3.87}
+  m_LocalRotation: {x: 0, y: 0.80062675, z: 0, w: 0.5991635}
+  m_LocalPosition: {x: 0.4, y: 0.5, z: -1.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7281,7 +7281,7 @@ Transform:
   - {fileID: 9159819223499715424}
   - {fileID: 7722517311910425896}
   m_Father: {fileID: 6213148955778217132}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 106.38, z: 0}
 --- !u!136 &1498278812095507656
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7319,7 +7319,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RotateX: 1
   RotateY: 0
-  sensitivityX: 200
+  sensitivityX: 100
   sensitivityY: 100
   minX: 0
   maxX: 0
@@ -11588,6 +11588,7 @@ GameObject:
   - component: {fileID: 4288218862184024213}
   - component: {fileID: 3152071366523273736}
   - component: {fileID: 3558329329533255797}
+  - component: {fileID: 435414801594068836}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -11687,7 +11688,7 @@ MonoBehaviour:
   RotateX: 0
   RotateY: 1
   sensitivityX: 100
-  sensitivityY: 200
+  sensitivityY: 100
   minX: 0
   maxX: 0
   minY: -90
@@ -11714,6 +11715,14 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!124 &435414801594068836
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7440283055018439616}
+  m_Enabled: 1
 --- !u!1 &7720650576721523774
 GameObject:
   m_ObjectHideFlags: 0

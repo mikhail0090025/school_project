@@ -11,6 +11,10 @@ public class TeamsSpawner : MonoBehaviour
     [SerializeField] int PlayersTeamIndex;
     [SerializeField] Transform Player;
     [SerializeField] bool FromGameSettings;
+    [Header("For debug")]
+    [SerializeField] int team_size_in_debug = 10;
+    [SerializeField] BotsDifficulty bots_difficulty_in_debug = BotsDifficulty.Medium;
+    // PRIVATE
     TMPro.TMP_Text TeamsLabel;
     MapPoints mp;
     void Start()
@@ -28,6 +32,13 @@ public class TeamsSpawner : MonoBehaviour
             Teams[1].Size = NewGameSettings.Team2Size;
             Teams[0].botsDifficulty = (BotsDifficulty)NewGameSettings.BotsDifficulty;
             Teams[1].botsDifficulty = (BotsDifficulty)NewGameSettings.BotsDifficulty;
+            if(NewGameSettings.Team1Size == 0)
+            {
+                Teams[0].Size = team_size_in_debug;
+                Teams[1].Size = team_size_in_debug;
+                Teams[0].botsDifficulty = bots_difficulty_in_debug;
+                Teams[1].botsDifficulty = bots_difficulty_in_debug;
+            }
         }
         foreach (var team in Teams)
         {

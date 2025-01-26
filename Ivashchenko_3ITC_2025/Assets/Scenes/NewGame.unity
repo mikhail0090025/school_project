@@ -503,6 +503,9 @@ MonoBehaviour:
     - m_Text: Home
       m_Image: {fileID: 0}
       m_Color: {r: 0, g: 0, b: 0, a: 0}
+    - m_Text: Small building
+      m_Image: {fileID: 0}
+      m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -4366,6 +4369,8 @@ MonoBehaviour:
     mapName: Forest
   - index: 1
     mapName: Home
+  - index: 2
+    mapName: SmallBuilding
 --- !u!4 &1868345688
 Transform:
   m_ObjectHideFlags: 0
