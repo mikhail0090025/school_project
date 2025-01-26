@@ -326,7 +326,7 @@ Transform:
   m_GameObject: {fileID: 284404997}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: -2.48, y: 1, z: -2.44}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -393,9 +393,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BotPrefabs:
   - {fileID: 6248007303954170579, guid: 6d76c11910537fc478c632a9617bbcdf, type: 3}
+  - {fileID: 7996464533955792330, guid: df011cc509274014ea5523b7b69710cb, type: 3}
   Teams:
   - Players: []
-    TeamColor: {r: 0, g: 0.041341305, b: 1, a: 0}
+    TeamColor: {r: 0.07629752, g: 1, b: 0, a: 0}
     Spawnpoint: {fileID: 284404998}
     Size: 30
     botsDifficulty: 3
@@ -696,7 +697,7 @@ Transform:
   m_GameObject: {fileID: 724470220}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 40.5, y: 1, z: 54.9}
+  m_LocalPosition: {x: 36.18, y: 1, z: 53.93}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1422,62 +1423,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1337913058092556797, guid: 5562f3602c731714baa48ed95f10bbf6, type: 3}
-      propertyPath: sensitivityX
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 2681242854745387441, guid: 5562f3602c731714baa48ed95f10bbf6, type: 3}
-      propertyPath: MaxAmmo
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2681242854745387441, guid: 5562f3602c731714baa48ed95f10bbf6, type: 3}
-      propertyPath: shootRate
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3121278364645165424, guid: 5562f3602c731714baa48ed95f10bbf6, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3121278364645165424, guid: 5562f3602c731714baa48ed95f10bbf6, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 3121278364645165424, guid: 5562f3602c731714baa48ed95f10bbf6, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.5991635
-      objectReference: {fileID: 0}
-    - target: {fileID: 3121278364645165424, guid: 5562f3602c731714baa48ed95f10bbf6, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3121278364645165424, guid: 5562f3602c731714baa48ed95f10bbf6, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.80062675
-      objectReference: {fileID: 0}
-    - target: {fileID: 3121278364645165424, guid: 5562f3602c731714baa48ed95f10bbf6, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3121278364645165424, guid: 5562f3602c731714baa48ed95f10bbf6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 106.38
-      objectReference: {fileID: 0}
-    - target: {fileID: 3152071366523273736, guid: 5562f3602c731714baa48ed95f10bbf6, type: 3}
-      propertyPath: sensitivityY
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 3177824560886370297, guid: 5562f3602c731714baa48ed95f10bbf6, type: 3}
-      propertyPath: damage
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 4281750093252379504, guid: 5562f3602c731714baa48ed95f10bbf6, type: 3}
-      propertyPath: damage
-      value: 160
-      objectReference: {fileID: 0}
-    - target: {fileID: 4281750093252379504, guid: 5562f3602c731714baa48ed95f10bbf6, type: 3}
-      propertyPath: shootRate
-      value: 0.8
-      objectReference: {fileID: 0}
     - target: {fileID: 4494826748694681832, guid: 5562f3602c731714baa48ed95f10bbf6, type: 3}
       propertyPath: m_Name
       value: Main
@@ -1521,6 +1466,10 @@ PrefabInstance:
     - target: {fileID: 6213148955778217132, guid: 5562f3602c731714baa48ed95f10bbf6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7930434257044567258, guid: 5562f3602c731714baa48ed95f10bbf6, type: 3}
+      propertyPath: m_Volume
+      value: 0.61
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

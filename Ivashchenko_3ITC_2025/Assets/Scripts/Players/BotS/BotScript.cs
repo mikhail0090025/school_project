@@ -148,7 +148,18 @@ public class BotScript : MonoBehaviour
         return true;
     }
 
-    public void AddTarget(Transform new_target) => Targets.Add(new_target); 
+    public void AddTarget(Transform new_target) => Targets.Add(new_target);
+
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    if (collision.collider.tag == "Player")
+    //    {
+    //        var diff = collision.transform.position - transform.position;
+    //        var point = transform.position - (diff * 2f);
+    //        agent.SetDestination(point);
+    //        Debug.Log((collision.transform.position, transform.position, point, diff));
+    //    }
+    //}
 }
 
 public enum BotsDifficulty { Easy, Medium, Hard, VeryHard}

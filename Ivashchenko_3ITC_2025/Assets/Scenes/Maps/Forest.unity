@@ -3153,6 +3153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BotPrefabs:
   - {fileID: 6248007303954170579, guid: 6d76c11910537fc478c632a9617bbcdf, type: 3}
+  - {fileID: 7996464533955792330, guid: df011cc509274014ea5523b7b69710cb, type: 3}
   Teams:
   - Players: []
     TeamColor: {r: 0, g: 0.013713121, b: 1, a: 0}
@@ -6259,9 +6260,9 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.13333334
+  m_VoxelSize: 0.1
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 67395dfee1fa5cc4eb2571bc75dd7afc, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1001 &2031201928
 PrefabInstance:
@@ -6704,6 +6705,10 @@ PrefabInstance:
     - target: {fileID: 4494826748694681832, guid: 5562f3602c731714baa48ed95f10bbf6, type: 3}
       propertyPath: m_Name
       value: Main
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030254956186343410, guid: 5562f3602c731714baa48ed95f10bbf6, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6213148955778217132, guid: 5562f3602c731714baa48ed95f10bbf6, type: 3}
       propertyPath: m_LocalPosition.x
