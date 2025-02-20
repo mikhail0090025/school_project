@@ -29,5 +29,9 @@ public class HpScriptPlayer : HPscript
     {
         FindObjectOfType<WindowsManager>().windows[DeathWindowIndex].TurnOn();
         FindObjectOfType<TeamsSpawner>().DeletePlayer(gameObject);
+        foreach (var bot in FindObjectsOfType<BotScript>())
+        {
+            bot.DeleteTargetIfPlayer();
+        }
     }
 }

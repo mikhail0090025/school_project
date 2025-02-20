@@ -95,6 +95,10 @@ public class BotScript : MonoBehaviour
         {
             if(Vector3.Distance(target.position, transform.position) < minDist)
             {
+                if (target.GetComponent<HpScriptPlayer>())
+                {
+                    if (target.GetComponent<HpScriptPlayer>().GetCurrentHP <= 0) continue;
+                }
                 current = target;
                 minDist = Vector3.Distance(target.position, transform.position);
             }
@@ -131,6 +135,14 @@ public class BotScript : MonoBehaviour
                 if (scr.GetCurrentHP <= 0f) myScoreCounter.NewKill();
             }
             else if(hit.collider.name == gameObject.name) Debug.Log("I hit myself");
+        }
+    }
+
+    public void DeleteTargetIfPlayer()
+    {
+        if (CurrentTarget.name == "Player")
+        {
+            CurrentTarget = null;
         }
     }
 

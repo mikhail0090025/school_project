@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Profiling;
 using UnityEngine;
 
 [RequireComponent(typeof(MouseRotate))] // Vyžaduje komponentu MouseRotate
@@ -79,7 +80,12 @@ public class PlayerController : MonoBehaviour
         // Skok
         if (jumpInput > 0)
         {
-            transform.position = Vector3.MoveTowards(transform.position, transform.position + Vector3.up, Time.deltaTime * jump * jumpFactor); // Skok
+            Ray ray = new Ray(transform.position, Vector3.down);
+            RaycastHit hit;
+            if(Physics.Raycast(ray, out hit))
+            {
+                if(hit.distance < 2f) transform.position = Vector3.MoveTowards(transform.position, transform.position + Vector3.up, Time.deltaTime * jump * jumpFactor); // Skok
+            }
         }
     }
 }
