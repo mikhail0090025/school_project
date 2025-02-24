@@ -7,7 +7,6 @@ using static UnityEngine.GraphicsBuffer;
 [RequireComponent(typeof(AudioSource))]
 public class BotScript : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     [SerializeField] Animator MyAnimator;
     public List<Transform> Targets;
     NavMeshAgent agent;
@@ -22,7 +21,7 @@ public class BotScript : MonoBehaviour
     float TimeSinceLastShot;
     float TimeBetweenShots;
     HPscript myHPS;
-    ScoreCounter myScoreCounter;
+    public ScoreCounter myScoreCounter { get; private set; }
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -34,16 +33,24 @@ public class BotScript : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         TimeSinceLastShot += Time.deltaTime;
         if(CurrentTarget == null) DefineTarget();
         if(CurrentTarget != null)
         {
-            if (CanHitTarget() && Vector3.Distance(CurrentTarget.position, transform.position) < 4f)
+            if (CanHitTarget() && Vector3.Distance(CurrentTarget.position, transform.position) < 15f)
             {
-                agent.SetDestination(transform.position);
+                if(Vector3.Distance(CurrentTarget.position, transform.position) < 10f)
+                {
+                    Vector3 retreatDirection = (transform.position - CurrentTarget.position).normalized;
+                    Vector3 newDestination = transform.position + retreatDirection * 3f;
+                    agent.SetDestination(newDestination);
+                }
+                else
+                {
+                    agent.SetDestination(transform.position);
+                }
                 transform.LookAt(CurrentTarget.position);
                 SetAnimation(false, false, true);
                 Shoot();
@@ -51,7 +58,8 @@ public class BotScript : MonoBehaviour
             else
             //if (Vector3.Distance(CurrentTarget.position, transform.position) < 20f)
             {
-                agent.SetDestination(CurrentTarget.position);
+                Vector3 randomOffset = new Vector3(Random.Range(-2f, 2f), 0, Random.Range(-2f, 2f));
+                agent.SetDestination(CurrentTarget.position + randomOffset);
                 SetAnimation(true, true, false);
                 if (CanHitTarget() && Random.Range(0f, (3f / Time.deltaTime)) < 1f)
                 {

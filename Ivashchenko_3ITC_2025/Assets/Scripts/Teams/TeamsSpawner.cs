@@ -12,7 +12,7 @@ public class TeamsSpawner : MonoBehaviour
     [SerializeField] Transform Player;
     [SerializeField] bool FromGameSettings;
     [Header("For debug")]
-    [SerializeField] int team_size_in_debug = 10;
+    [SerializeField] int team_size_in_debug = 25;
     [SerializeField] BotsDifficulty bots_difficulty_in_debug = BotsDifficulty.Medium;
     // PRIVATE
     TMPro.TMP_Text TeamsLabel;

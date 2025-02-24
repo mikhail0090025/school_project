@@ -52,6 +52,7 @@ public class Window
 {
     [SerializeField] GameObject Window_; // Odkaz na herní objekt okna
     [SerializeField] KeyCode Key; // Klávesa pro ovládání okna
+    //[SerializeField] bool OnlyWhileKeyPressed = false;
 
     // Zapni okno
     public void TurnOn()
