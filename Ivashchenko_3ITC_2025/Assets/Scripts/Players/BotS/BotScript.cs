@@ -21,7 +21,7 @@ public class BotScript : MonoBehaviour
     float TimeSinceLastShot;
     float TimeBetweenShots;
     HPscript myHPS;
-    ScoreCounter myScoreCounter;
+    public ScoreCounter myScoreCounter { get; private set; }
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();

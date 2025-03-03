@@ -7574,7 +7574,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BotPrefabs:
   - {fileID: 6248007303954170579, guid: 6d76c11910537fc478c632a9617bbcdf, type: 3}
-  - {fileID: 7996464533955792330, guid: df011cc509274014ea5523b7b69710cb, type: 3}
+  - {fileID: 51250924728586342, guid: df011cc509274014ea5523b7b69710cb, type: 3}
   Teams:
   - Players: []
     TeamColor: {r: 0.07629752, g: 1, b: 0, a: 0}
@@ -13165,6 +13165,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main
       objectReference: {fileID: 0}
+    - target: {fileID: 4704541924254374929, guid: 5562f3602c731714baa48ed95f10bbf6, type: 3}
+      propertyPath: m_fontSize
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 4704541924254374929, guid: 5562f3602c731714baa48ed95f10bbf6, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 6213148955778217132, guid: 5562f3602c731714baa48ed95f10bbf6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -13213,14 +13221,6 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-    - target: {fileID: 7019340683475072210, guid: 5562f3602c731714baa48ed95f10bbf6, type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7930434257044567258, guid: 5562f3602c731714baa48ed95f10bbf6, type: 3}
-      propertyPath: m_Volume
-      value: 0.61
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
