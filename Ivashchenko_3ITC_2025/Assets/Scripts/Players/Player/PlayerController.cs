@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Profiling;
+// using UnityEditor.Profiling;
 using UnityEngine;
 
 [RequireComponent(typeof(MouseRotate))] // Vyžaduje komponentu MouseRotate
