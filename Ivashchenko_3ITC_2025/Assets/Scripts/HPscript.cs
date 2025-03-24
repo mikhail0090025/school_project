@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class HPscript : MonoBehaviour
@@ -8,12 +9,14 @@ public class HPscript : MonoBehaviour
     public float GetCurrentHP => CurrentHP;
     [SerializeField] GameObject DeadBody;
     ScoreCounter scoreCounter;
+    TeamsSpawner teamsSpawner;
 
 
     protected virtual void Start()
     {
         CurrentHP = MaxHP;
         scoreCounter = GetComponent<ScoreCounter>();
+        teamsSpawner = FindAnyObjectByType<TeamsSpawner>();
     }
 
     protected virtual void Update()
@@ -30,16 +33,29 @@ public class HPscript : MonoBehaviour
     public virtual void Dead()
     {
         scoreCounter.NewDeath();
-        foreach (var item in FindObjectsOfType<BotScript>())
+
+
+        if (teamsSpawner.CurrentGameMode == GameMode.TwoTeams)
         {
-            item.Targets.RemoveAll(target => target == transform);
+            foreach (var item in FindObjectsOfType<BotScript>())
+            {
+                item.Targets.RemoveAll(target => target == transform);
+            }
+            Destroy(gameObject);
+        } else if (teamsSpawner.CurrentGameMode == GameMode.FreeForAll)
+        {
+            var my_team = teamsSpawner.DefineTeam(gameObject);
+            var Spawnpoints = new List<GameObject>(GameObject.FindGameObjectsWithTag("Spawner"));
+            transform.position = Spawnpoints.GetRandomItem().transform.position;
+            Destroy(gameObject);
         }
+
+
         var deadbody = Instantiate(DeadBody, transform.position, transform.rotation);
         var sbc = GetComponent<SetBodyColor>();
         if (sbc)
         {
             deadbody.GetComponent<DeadbodyScript>()?.PaintMe(sbc.BotsColor);
         }
-        Destroy(gameObject);
     }
 }
