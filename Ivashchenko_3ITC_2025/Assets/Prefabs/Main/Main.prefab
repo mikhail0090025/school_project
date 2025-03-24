@@ -3912,6 +3912,7 @@ GameObject:
   - component: {fileID: 8943241920405330928}
   - component: {fileID: 6152867748030975806}
   - component: {fileID: 965968340655861393}
+  - component: {fileID: 4056770069843354985}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -4034,6 +4035,19 @@ MonoBehaviour:
     Key: 0
   - Window_: {fileID: 6468243440773305392}
     Key: 9
+--- !u!114 &4056770069843354985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2499427173695268858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 330bf83d5b84df048896f09cfbb45b43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TeamsLabel: {fileID: 2588491518616121718}
 --- !u!1 &2543295034013031592
 GameObject:
   m_ObjectHideFlags: 0
@@ -8831,8 +8845,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -100}
-  m_SizeDelta: {x: 1300, y: 800}
+  m_AnchoredPosition: {x: 0, y: -25}
+  m_SizeDelta: {x: 1300, y: 950}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1624853152171829939
 CanvasRenderer:
@@ -8889,8 +8903,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 35
+  m_fontSizeBase: 35
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
