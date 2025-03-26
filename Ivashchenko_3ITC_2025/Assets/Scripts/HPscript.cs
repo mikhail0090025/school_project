@@ -47,7 +47,6 @@ public class HPscript : MonoBehaviour
             var my_team = teamsSpawner.DefineTeam(gameObject);
             var Spawnpoints = new List<GameObject>(GameObject.FindGameObjectsWithTag("Spawner"));
             transform.position = Spawnpoints.GetRandomItem().transform.position;
-            Destroy(gameObject);
         }
 
 
