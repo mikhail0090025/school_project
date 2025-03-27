@@ -22,7 +22,7 @@ public class InventoryCell : MonoBehaviour
 
     void Start()
     {
-        PI = FindObjectOfType<PlayerInventory>();     // Najde instanci inventáře hráče
+        PI = FindFirstObjectByType<PlayerInventory>();     // Najde instanci inventáře hráče
         CellButton.onClick.RemoveAllListeners();      // Odstraní všechny posluchače z tlačítka
         CellButton.onClick.AddListener(delegate       // Přidá posluchač pro kliknutí na buňku
         {
@@ -42,7 +42,7 @@ public class InventoryCell : MonoBehaviour
         else
         {
             CellText.text = $"x{count}";              // Zobrazuje počet položek
-            var item = FindObjectOfType<ItemsData>().Items.Find(x => x.ID == ID); // Najde položku podle ID
+            var item = FindFirstObjectByType<ItemsData>().Items.Find(x => x.ID == ID); // Najde položku podle ID
             CellImage.sprite = item.Texture;          // Nastaví obrázek položky
         }
     }

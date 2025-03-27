@@ -19,7 +19,7 @@ public class ScoreUiScript : MonoBehaviour
         int index = 1;
         var player = GameObject.FindGameObjectWithTag("Player").GetComponent<ScoreCounter>();
         result += $"Player: {player.Kills}      {player.FriendKills}        {player.Deaths}         {player.Score()}\n";
-        foreach (var bot in FindObjectsOfType<ScoreCounter>())
+        foreach (var bot in FindObjectsByType<ScoreCounter>(FindObjectsSortMode.None))
         {
             if (bot == player) continue;
             result += $"Bot {index}: {bot.Kills}      {bot.FriendKills}        {bot.Deaths}         {bot.Score()}\n";

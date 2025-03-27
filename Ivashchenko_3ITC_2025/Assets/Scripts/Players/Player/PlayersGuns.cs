@@ -12,7 +12,7 @@ public class PlayersGuns : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        itemsData = FindObjectOfType<ItemsData>(); // Najdi data o položkách
+        itemsData = FindFirstObjectByType<ItemsData>(); // Najdi data o položkách
         PI = GetComponent<PlayerInventory>(); // Získejte komponentu inventáře hráče
         SetGunByInventory(); // Nastavte zbraň podle inventáře
     }

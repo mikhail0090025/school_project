@@ -14,7 +14,7 @@ public class PlayerInventory : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ItemsData = FindObjectOfType<ItemsData>(); // Najdi data o položkách
+        ItemsData = FindFirstObjectByType<ItemsData>(); // Najdi data o položkách
         foreach (var cell in inventoryCells)
         {
             cell.ResetCell(); // Resetuj každou buňku

@@ -16,7 +16,7 @@ public class CollectOnClick : MonoBehaviour
     // Inicializace komponenty - vyhledání inventáře hráče
     void Start()
     {
-        inventory = FindObjectOfType<PlayerInventory>();
+        inventory = FindFirstObjectByType<PlayerInventory>();
     }
 
     // Detekuje kliknutí myší na objekt

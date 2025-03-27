@@ -106,7 +106,7 @@ public class Gun : MonoBehaviour
             if (scr)
             {
                 scr.Damage(damage * (Random.Range(50, 150) / 100f));
-                var teamsScr = FindObjectOfType<TeamsSpawner>();
+                var teamsScr = FindFirstObjectByType<TeamsSpawner>();
                 if (scr.GetCurrentHP <= 0f && teamsScr.SameTeam(scr.gameObject, Player))
                 {
                     scoreCounter.NewFriendKill();

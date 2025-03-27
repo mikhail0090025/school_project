@@ -36,7 +36,7 @@ public class WindowsManager : MonoBehaviour
     {
         get
         {
-            var windows = FindObjectOfType<WindowsManager>().windows; // Najdi všechna okna
+            var windows = FindFirstObjectByType<WindowsManager>().windows; // Najdi všechna okna
             foreach (var item in windows)
             {
                 // Pokud je některé okno otevřené, vrať true

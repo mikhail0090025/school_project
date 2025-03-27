@@ -37,7 +37,7 @@ public class HPscript : MonoBehaviour
 
         if (teamsSpawner.CurrentGameMode == GameMode.TwoTeams)
         {
-            foreach (var item in FindObjectsOfType<BotScript>())
+            foreach (var item in FindObjectsByType<BotScript>(FindObjectsSortMode.None))
             {
                 item.Targets.RemoveAll(target => target == transform);
             }

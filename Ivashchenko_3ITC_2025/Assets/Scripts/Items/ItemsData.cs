@@ -19,7 +19,7 @@ public class ItemsData : MonoBehaviour
     // Inicializace instance při startu
     void Start()
     {
-        instance = FindObjectOfType<ItemsData>();
+        instance = FindFirstObjectByType<ItemsData>();
     }
 
     // Statická metoda pro získání položky podle ID

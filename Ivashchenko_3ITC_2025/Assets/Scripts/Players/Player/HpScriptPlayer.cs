@@ -9,7 +9,7 @@ public class HpScriptPlayer : HPscript
     protected override void Start()
     {
         base.Start();
-        FindObjectOfType<WindowsManager>().windows[DeathWindowIndex].TurnOff();
+        FindFirstObjectByType<WindowsManager>().windows[DeathWindowIndex].TurnOff();
         UpdateUI();
     }
 
@@ -25,11 +25,12 @@ public class HpScriptPlayer : HPscript
         TextHp.text = $"{CurrentHP} / {MaxHP}";
         PlayerHP.fillAmount = (float)CurrentHP / MaxHP;
     }
+
     public override void Dead()
     {
-        FindObjectOfType<WindowsManager>().windows[DeathWindowIndex].TurnOn();
-        FindObjectOfType<TeamsSpawner>().DeletePlayer(gameObject);
-        foreach (var bot in FindObjectsOfType<BotScript>())
+        FindFirstObjectByType<WindowsManager>().windows[DeathWindowIndex].TurnOn();
+        FindFirstObjectByType<TeamsSpawner>().DeletePlayer(gameObject);
+        foreach (var bot in FindObjectsByType<BotScript>(FindObjectsSortMode.None))
         {
             bot.DeleteTargetIfPlayer();
         }
