@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class HPscript : MonoBehaviour
 {
@@ -41,7 +42,21 @@ public class HPscript : MonoBehaviour
             {
                 item.Targets.RemoveAll(target => target == transform);
             }
-            Destroy(gameObject);
+            Destroy(GetComponent<BotScript>());
+            Destroy(GetComponent<ScoreCounter>());
+            Destroy(GetComponent<Animator>());
+            Destroy(GetComponent<NavMeshAgent>());
+            Destroy(transform.Find("Quad").gameObject);
+            Destroy(transform.Find("PlayerPoint").gameObject);
+            gameObject.name = gameObject.name + "Dead";
+            var rb = GetComponent<Rigidbody>();
+            var delin = gameObject.AddComponent<DeleteIn>();
+            delin.seconds = 8;
+            rb.constraints = RigidbodyConstraints.None;
+            Debug.Log("I am killed");
+            Destroy(this);
+            return;
+            //Destroy(gameObject);
         } else if (teamsSpawner.CurrentGameMode == GameMode.FreeForAll)
         {
             var my_team = teamsSpawner.DefineTeam(gameObject);
