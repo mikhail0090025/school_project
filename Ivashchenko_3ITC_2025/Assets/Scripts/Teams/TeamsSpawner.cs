@@ -88,8 +88,8 @@ public class TeamsSpawner : MonoBehaviour
                 {
                     team.Players.Clear();
                     team.Players.Add(Player.gameObject);
-                    Player.gameObject.transform.position = team.Spawnpoint.position;
                 }
+                Player.gameObject.transform.position = team.Spawnpoint.position;
             }
         }
         foreach (var team1 in Teams)

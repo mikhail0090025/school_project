@@ -8,21 +8,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7463345019194330584, guid: 6d76c11910537fc478c632a9617bbcdf, type: 3}
+      propertyPath: MaxHP
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 1729756483960495749, guid: 6d76c11910537fc478c632a9617bbcdf, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: b5511f350ffad8044ae31ed4136162c7, type: 2}
     - target: {fileID: 5005446019269110326, guid: 6d76c11910537fc478c632a9617bbcdf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 69.98551
+      value: -37.46311
       objectReference: {fileID: 0}
     - target: {fileID: 5005446019269110326, guid: 6d76c11910537fc478c632a9617bbcdf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 30.71
+      value: 0.9999962
       objectReference: {fileID: 0}
     - target: {fileID: 5005446019269110326, guid: 6d76c11910537fc478c632a9617bbcdf, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 29.350273
+      value: -2.1209946
       objectReference: {fileID: 0}
     - target: {fileID: 5005446019269110326, guid: 6d76c11910537fc478c632a9617bbcdf, type: 3}
       propertyPath: m_LocalRotation.w
@@ -55,6 +59,18 @@ PrefabInstance:
     - target: {fileID: 6248007303954170579, guid: 6d76c11910537fc478c632a9617bbcdf, type: 3}
       propertyPath: m_Name
       value: BotAmbatukam
+      objectReference: {fileID: 0}
+    - target: {fileID: 7602863231910744142, guid: 6d76c11910537fc478c632a9617bbcdf, type: 3}
+      propertyPath: m_Range
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7602863231910744142, guid: 6d76c11910537fc478c632a9617bbcdf, type: 3}
+      propertyPath: m_Intensity
+      value: 4.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 7602863231910744142, guid: 6d76c11910537fc478c632a9617bbcdf, type: 3}
+      propertyPath: m_SpotAngle
+      value: 28.42972
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
