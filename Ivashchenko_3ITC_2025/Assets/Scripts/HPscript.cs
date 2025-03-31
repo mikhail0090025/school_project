@@ -55,21 +55,22 @@ public class HPscript : MonoBehaviour
             rb.constraints = RigidbodyConstraints.None;
             Debug.Log("I am killed");
             Destroy(this);
-            return;
             //Destroy(gameObject);
         } else if (teamsSpawner.CurrentGameMode == GameMode.FreeForAll)
         {
             var my_team = teamsSpawner.DefineTeam(gameObject);
             var Spawnpoints = new List<GameObject>(GameObject.FindGameObjectsWithTag("Spawner"));
             transform.position = Spawnpoints.GetRandomItem().transform.position;
+            CurrentHP = MaxHP;
         }
+        Debug.Log("I am killed");
 
 
-        var deadbody = Instantiate(DeadBody, transform.position, transform.rotation);
+        /*var deadbody = Instantiate(DeadBody, transform.position, transform.rotation);
         var sbc = GetComponent<SetBodyColor>();
         if (sbc)
         {
             deadbody.GetComponent<DeadbodyScript>()?.PaintMe(sbc.BotsColor);
-        }
+        }*/
     }
 }
