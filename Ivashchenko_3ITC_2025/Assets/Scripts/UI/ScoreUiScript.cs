@@ -1,5 +1,7 @@
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections.Generic;
 using TMPro;
+using NUnit.Framework;
 
 public class ScoreUiScript : MonoBehaviour
 {
@@ -19,7 +21,9 @@ public class ScoreUiScript : MonoBehaviour
         int index = 1;
         var player = GameObject.FindGameObjectWithTag("Player").GetComponent<ScoreCounter>();
         result += $"Player: {player.Kills}      {player.FriendKills}        {player.Deaths}         {player.Score()}\n";
-        foreach (var bot in FindObjectsByType<ScoreCounter>(FindObjectsSortMode.None))
+        var collection = new List<ScoreCounter>(FindObjectsByType<ScoreCounter>(FindObjectsSortMode.None));
+        collection.Sort((a, b) => b.Score().CompareTo(a.Score())); // Сортировка по убыванию
+        foreach (var bot in collection)
         {
             if (bot == player) continue;
             result += $"Bot {index}: {bot.Kills}      {bot.FriendKills}        {bot.Deaths}         {bot.Score()}\n";
