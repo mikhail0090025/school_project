@@ -138,6 +138,15 @@ public class BotScript : MonoBehaviour
         {
             if (hit.collider.gameObject.GetComponent<HPscript>())
             {
+                bool isMainPlayer = hit.collider.gameObject.GetComponent<HpScriptPlayer>() != null;
+                if (isMainPlayer)
+                {
+                    var dir = transform.rotation.y - hit.collider.transform.rotation.y;
+                    //dir *= 180 / Mathf.PI;
+                    Debug.Log($"Direction: {dir}, players rotation: {transform.rotation.y}, my rotation: {hit.collider.transform.rotation.y}");
+                    
+                    DamageIndicator.ShowIndicator(dir);
+                }
                 var scr = hit.collider.gameObject.GetComponent<HPscript>();
                 scr.Damage(this.Damage * (Random.Range(50, 150) / 100f));
                 if (scr.GetCurrentHP <= 0f) myScoreCounter.NewKill();

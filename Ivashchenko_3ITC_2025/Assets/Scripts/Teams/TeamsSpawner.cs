@@ -36,6 +36,7 @@ public class TeamsSpawner : MonoBehaviour
                 Teams[1].Size = NewGameSettings.Team2Size;
                 Teams[0].botsDifficulty = NewGameSettings.BotsDifficulty;
                 Teams[1].botsDifficulty = NewGameSettings.BotsDifficulty;
+                Teams[PlayersTeamIndex].Size--;
                 if (NewGameSettings.Team1Size == 0)
                 {
                     Teams[0].Size = team_size_in_debug;

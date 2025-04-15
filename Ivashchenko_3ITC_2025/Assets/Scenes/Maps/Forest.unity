@@ -3670,7 +3670,7 @@ MonoBehaviour:
   FromGameSettings: 1
   TeamsLabel: {fileID: 2659176751642099823}
   currentGameMode: 0
-  team_size_in_debug: 10
+  team_size_in_debug: 15
   bots_difficulty_in_debug: 1
 --- !u!4 &983299106
 Transform:
@@ -7816,6 +7816,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6213148955778217132, guid: 5562f3602c731714baa48ed95f10bbf6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6468243440773305392, guid: 5562f3602c731714baa48ed95f10bbf6, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
