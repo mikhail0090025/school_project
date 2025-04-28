@@ -5203,7 +5203,7 @@ MonoBehaviour:
   PlayersTeamIndex: 0
   Player: {fileID: 3121278364782249875}
   FromGameSettings: 1
-  TeamsLabel: {fileID: 0}
+  TeamsLabel: {fileID: 2107389906791711791}
   currentGameMode: 0
   team_size_in_debug: 10
   bots_difficulty_in_debug: 1
@@ -9774,6 +9774,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5562f3602c731714baa48ed95f10bbf6, type: 3}
+--- !u!114 &2107389906791711791 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3542489474074723476, guid: 5562f3602c731714baa48ed95f10bbf6, type: 3}
+  m_PrefabInstance: {fileID: 2107389906791711790}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &3121278364782249875 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3121278364645165424, guid: 5562f3602c731714baa48ed95f10bbf6, type: 3}

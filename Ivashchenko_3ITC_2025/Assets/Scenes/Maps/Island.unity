@@ -4477,6 +4477,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3121278364645165424, guid: 5562f3602c731714baa48ed95f10bbf6, type: 3}
   m_PrefabInstance: {fileID: 1425265389}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1425265391 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3542489474074723476, guid: 5562f3602c731714baa48ed95f10bbf6, type: 3}
+  m_PrefabInstance: {fileID: 1425265389}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1426388902
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5598,7 +5609,7 @@ MonoBehaviour:
   PlayersTeamIndex: 0
   Player: {fileID: 1425265390}
   FromGameSettings: 1
-  TeamsLabel: {fileID: 0}
+  TeamsLabel: {fileID: 1425265391}
   currentGameMode: 0
   team_size_in_debug: 10
   bots_difficulty_in_debug: 1
