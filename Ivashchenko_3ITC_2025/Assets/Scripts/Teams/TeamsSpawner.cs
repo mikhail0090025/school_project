@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 //using static UnityEditor.Experimental.GraphView.GraphView;
 [RequireComponent(typeof(MapPoints))]
 public class TeamsSpawner : MonoBehaviour
@@ -70,7 +71,7 @@ public class TeamsSpawner : MonoBehaviour
             int sqrt = Mathf.RoundToInt(Mathf.Sqrt(team.Size));
             for (int i = 0; i < team.Size; i++)
             {
-                var spawned = Instantiate(BotPrefabs[UnityEngine.Random.Range(0, BotPrefabs.Count)], team.Spawnpoint.position + new Vector3((i / sqrt), 0,i % sqrt), Quaternion.identity);
+                var spawned = Instantiate(BotPrefabs[UnityEngine.Random.Range(0, BotPrefabs.Count)], team.Spawnpoint.position + new Vector3((i / sqrt) * 1.5f, 0,(i % sqrt) * 1.5f), Quaternion.identity);
                 var bot_script = spawned.GetComponent<BotScript>();
                 spawned.transform.Find("PlayerPoint").GetComponent<Renderer>().material.color = team.TeamColor;
                 spawned.transform.Find("Quad").GetComponent<Renderer>().material.color = team.TeamColor;
