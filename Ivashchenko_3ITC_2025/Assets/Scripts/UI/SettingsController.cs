@@ -3,18 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Rendering;
 public class SettingsController : MonoBehaviour
 {
     // Settings
     static int currentResolution = 0;
     static bool fullscreen = true;
+    static float volume = 1.0f;
     // UI
     [SerializeField] TMP_Dropdown ResolutionDropdown;
     [SerializeField] Toggle FullscreenToggle;
+    [SerializeField] Slider VolumeSlider;
+    [SerializeField] TMP_Text VolumePercent;
     void Start()
     {
         ResolutionDropdown.value = currentResolution;
         FullscreenToggle.isOn = fullscreen;
+        VolumeSlider.value = volume;
         ResolutionDropdown.onValueChanged.AddListener(delegate
         {
             SetSettings();
@@ -25,12 +30,19 @@ public class SettingsController : MonoBehaviour
             SetSettings();
             ApplySettings();
         });
+        VolumeSlider.onValueChanged.AddListener(delegate
+        {
+            SetSettings();
+            ApplySettings();
+        });
     }
 
     void SetSettings()
     {
         currentResolution = ResolutionDropdown.value;
         fullscreen = FullscreenToggle.isOn;
+        volume = VolumeSlider.value;
+        VolumePercent.text = ((int)(VolumeSlider.value * 100f)).ToString() + "%";
     }
     void ApplySettings()
     {
@@ -52,5 +64,6 @@ public class SettingsController : MonoBehaviour
                 Screen.SetResolution(640, 480, fullscreen);
                 break;
         }
+        
     }
 }
